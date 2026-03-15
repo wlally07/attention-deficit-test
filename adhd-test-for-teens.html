@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADHD Test for Teens | ADHD Assessment for Teenagers | AttentionDeficitTest.com</title>
+  <meta name="description" content="ADHD assessment for teenagers aged 13 to 17. Clinically-informed screening based on DSM-5 criteria. Instant results, professional consultations available online or face to face worldwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,300;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark:#12100e;--dark-2:#1c1a17;--dark-3:#252219;
+      --ink:#1e1c19;--ink-soft:#5c5850;--ink-muted:#9a9288;
+      --cream:#faf8f4;--cream-2:#f2ede6;--white:#ffffff;
+      --amber:#e8a020;--amber-lt:#f5c060;--amber-glow:rgba(232,160,32,.15);
+      --teal:#2a9d8f;--teal-lt:#52c9bb;
+      --border:rgba(30,28,25,.1);--border-dk:rgba(255,255,255,.1);
+      --r:16px;--r-lg:24px;
+      --serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',sans-serif;
+      --sh-sm:0 2px 12px rgba(0,0,0,.06);--sh-md:0 8px 32px rgba(0,0,0,.1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden}
+    h1,h2,h3{font-family:var(--serif);line-height:1.1}
+    h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:700;letter-spacing:-.02em}
+    h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;letter-spacing:-.015em}
+    h3{font-size:1.2rem;font-weight:600}
+    p{color:var(--ink-soft);font-size:.96rem}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 24px}
+    .section{padding:100px 0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:700;cursor:pointer;border:none;border-radius:100px;transition:transform .22s,box-shadow .22s,background .22s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-amber{background:var(--amber);color:var(--dark);padding:15px 32px;font-size:.96rem;box-shadow:0 6px 28px rgba(232,160,32,.38)}
+    .btn-amber:hover{background:var(--amber-lt);box-shadow:0 12px 40px rgba(232,160,32,.5)}
+    .btn-ghost-dark{background:transparent;color:rgba(255,255,255,.75);border:1.5px solid rgba(255,255,255,.22);padding:14px 28px;font-size:.93rem;border-radius:100px}
+    .btn-ghost-dark:hover{background:rgba(255,255,255,.07);color:#fff}
+    .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--border);padding:14px 28px;font-size:.93rem;border-radius:100px}
+    .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+    .pill{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;padding:7px 16px;border-radius:100px}
+    .pill-amber{background:var(--amber-glow);color:var(--amber);border:1px solid rgba(232,160,32,.25)}
+    .pill-dark{background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.12)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* NAV — exact copy from index */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:16px 0;transition:background .4s,box-shadow .4s}
+    .nav.solid{background:rgba(18,16,14,.96);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between}
+    .nav__logo{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff;display:flex;align-items:center;gap:10px}
+    .nav__logo-ic{width:32px;height:32px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .nav__links{display:flex;gap:28px;list-style:none}
+    .nav__links a{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.55);transition:color .2s}
+    .nav__links a:hover{color:#fff}
+    @media(max-width:768px){.nav__links{display:none}}
+
+    /* HERO */
+    .hero{background:var(--dark);min-height:100vh;display:flex;flex-direction:column;padding-top:80px;position:relative;overflow:hidden}
+    .hero-glow{position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(232,160,32,.08) 0%,transparent 70%);top:-300px;right:-200px;z-index:0;pointer-events:none}
+    .hero__body{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:80px 0 52px}
+    .hero__tag{margin-bottom:24px;animation:fadeUp .4s ease both}
+    .hero__h1{color:#fff;margin-bottom:22px;animation:fadeUp .45s .1s ease both}
+    .hero__h1 em{font-style:italic;color:var(--amber)}
+    .hero__sub{color:rgba(255,255,255,.52);font-size:1rem;max-width:440px;margin-bottom:36px;line-height:1.7;animation:fadeUp .5s .2s ease both}
+    .hero__btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;animation:fadeUp .5s .25s ease both}
+    .hero__stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;animation:fadeUp .5s .3s ease both}
+    .hstat{padding-right:32px;margin-right:32px;border-right:1px solid rgba(255,255,255,.08)}
+    .hstat:last-child{border:none;margin:0;padding:0}
+    .hstat strong{display:block;font-size:1.15rem;font-weight:700;color:#fff;font-family:var(--serif)}
+    .hstat span{font-size:.78rem;color:rgba(255,255,255,.38)}
+
+    /* HERO CARD */
+    .hero__card{background:var(--dark-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.4)}
+    .qcard__top{padding:28px 28px 20px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .qcard__top h3{color:#fff;font-size:1.15rem;margin-bottom:4px}
+    .qcard__top p{color:rgba(255,255,255,.4);font-size:.82rem}
+    .qcard__list{padding:22px 28px;display:flex;flex-direction:column;gap:13px}
+    .qcard__item{display:flex;align-items:flex-start;gap:11px;font-size:.87rem;color:rgba(255,255,255,.6);line-height:1.5}
+    .qcard__ic{width:26px;height:26px;background:rgba(232,160,32,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.82rem}
+    .qcard__foot{padding:18px 28px 26px}
+    .qbtn{width:100%;padding:14px;border-radius:100px;background:var(--amber);color:var(--dark);font-family:var(--sans);font-weight:700;font-size:.95rem;border:none;cursor:pointer;box-shadow:0 6px 24px rgba(232,160,32,.35);transition:background .2s,transform .2s}
+    .qbtn:hover{background:var(--amber-lt);transform:translateY(-1px)}
+    .qcard__disc{font-size:.7rem;color:rgba(255,255,255,.25);text-align:center;margin-top:10px;line-height:1.5}
+    @media(max-width:900px){.hero__body{grid-template-columns:1fr}.hero__card{max-width:460px;margin:0 auto;width:100%}}
+
+    /* TICKER */
+    .ticker{background:var(--dark-3);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:14px 0;overflow:hidden}
+    .ticker__track{display:inline-flex;animation:ticker 32s linear infinite}
+    .ticker__item{display:inline-flex;align-items:center;gap:10px;padding:0 32px;font-size:.81rem;color:rgba(255,255,255,.38);font-weight:500}
+    .ticker__item strong{color:rgba(255,255,255,.75)}
+    .ticker__dot{color:var(--amber);font-size:.55rem}
+
+    /* SECTIONS */
+    .section-hd{text-align:center;max-width:580px;margin:0 auto 56px}
+    .section-hd h2{margin-bottom:14px}
+    .section-hd p{font-size:.97rem}
+    .section-hd em{font-style:italic;color:var(--amber)}
+    .eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:10px;display:block}
+
+    /* SIGNS GRID */
+    .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .scard{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;box-shadow:var(--sh-sm);transition:transform .3s,box-shadow .3s}
+    .scard:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+    .scard__ico{font-size:1.8rem;margin-bottom:14px}
+    .scard h3{margin-bottom:8px;font-size:1.05rem}
+    .scard p{font-size:.88rem;line-height:1.7}
+
+    /* TWO COL */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+    @media(max-width:860px){.two-col{grid-template-columns:1fr;gap:40px}}
+
+    /* STEPS */
+    .steps{display:flex;flex-direction:column;gap:24px;margin-top:8px}
+    .step{display:flex;gap:18px;align-items:flex-start}
+    .step__num{width:40px;height:40px;background:var(--amber);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;flex-shrink:0;font-family:var(--sans)}
+    .step h3{font-size:1rem;margin-bottom:5px}
+    .step p{font-size:.88rem;line-height:1.7}
+
+    /* KEY POINTS */
+    .kp{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:20px}
+    .kpi{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--ink-soft)}
+    .tick{width:19px;height:19px;flex-shrink:0;margin-top:2px}
+
+    /* DARK SECTION */
+    .dark-sec{background:var(--dark);padding:100px 0}
+    .dark-sec h2{color:#fff}
+    .dark-sec .section-hd p{color:rgba(255,255,255,.45)}
+    .dark-sec em{font-style:italic;color:var(--amber)}
+
+    /* FAQ */
+    .flist{display:flex;flex-direction:column;gap:10px}
+    .fi{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm)}
+    .fi summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 24px;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink);user-select:none;transition:background .15s;font-family:var(--sans)}
+    .fi summary::-webkit-details-marker{display:none}
+    .fi summary:hover,.fi[open] summary{background:var(--cream-2)}
+    .fi[open] summary{border-bottom:1px solid var(--border)}
+    .tog{width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--cream-2);color:var(--ink);font-size:1.3rem;font-weight:300;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .25s,color .2s}
+    .fi[open] .tog{background:var(--amber);color:var(--dark);transform:rotate(45deg)}
+    .fb{padding:16px 24px 22px;font-size:.92rem;line-height:1.8;color:var(--ink-soft)}
+    .fb p+p{margin-top:10px}
+
+    /* CTA */
+    .cta-block{background:var(--dark);border-radius:var(--r-lg);padding:60px 48px;text-align:center}
+    .cta-block h2{color:#fff;margin-bottom:14px}
+    .cta-block p{color:rgba(255,255,255,.45);max-width:480px;margin:0 auto 32px;font-size:.97rem;line-height:1.7}
+
+    /* FOOTER */
+    footer{background:var(--dark-2);padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.06)}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .foot-brand{font-family:var(--serif);font-weight:700;font-size:1rem;color:#fff;margin-bottom:10px}
+    .foot-brand span{color:var(--amber)}
+    .foot-tagline{font-size:.8rem;color:rgba(255,255,255,.3);line-height:1.6}
+    .foot-col h4{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:14px}
+    .foot-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.4);margin-bottom:8px;transition:color .15s}
+    .foot-col a:hover{color:#fff}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;font-size:.75rem;color:rgba(255,255,255,.2);line-height:1.6}
+    @media(max-width:768px){.foot-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+<!-- NAV — exact same structure as index -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="https://attentiondeficittest.com/" class="nav__logo" aria-label="AttentionDeficitTest home">
+        <div class="nav__logo-ic">🧠</div>
+        AttentionDeficitTest<span style="color:var(--amber)">.com</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></li>
+        <li><a href="https://attentiondeficittest.com/adhd">About ADHD</a></li>
+        <li><a href="https://attentiondeficittest.com/#pricing">Pricing</a></li>
+        <li><a href="https://attentiondeficittest.com/faqs">FAQ</a></li>
+      </ul>
+      <a href="https://attentiondeficittest.com/assessment" class="btn btn-amber" style="padding:11px 24px;font-size:.88rem">Start Assessment</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" role="banner">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero__body">
+      <div>
+        <div class="hero__tag"><span class="pill pill-dark">Clinically-Informed · For Teenagers Aged 13 to 17</span></div>
+        <h1 class="hero__h1">Does Your Teen Have <em>Attention Deficit</em> Disorder?</h1>
+        <p class="hero__sub">ADHD in teenagers is frequently missed or misdiagnosed. Our clinically-informed assessment helps identify whether your teenager's struggles with focus, impulsivity, or behaviour could point to ADHD, and what to do next.</p>
+        <div class="hero__btns">
+          <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Start Teen ADHD Assessment</a>
+          <a href="#how-it-works" class="btn btn-ghost-dark">How It Works</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hstat"><strong>4.9 / 5.0</strong><span>8,400+ reviews</span></div>
+          <div class="hstat"><strong>40+ Countries</strong><span>Worldwide access</span></div>
+          <div class="hstat"><strong>GDPR Secure</strong><span>Private &amp; encrypted</span></div>
+        </div>
+      </div>
+      <div class="hero__card">
+        <div class="qcard__top">
+          <h3>ADHD Assessment for Teens</h3>
+          <p>For parents and teenagers aged 13 to 17</p>
+        </div>
+        <div class="qcard__list">
+          <div class="qcard__item"><span class="qcard__ic">🧠</span>Clinically-informed, based on DSM-5 and WHO ASRS criteria</div>
+          <div class="qcard__item"><span class="qcard__ic">⚡</span>Takes just 5 to 8 minutes with instant personalised results</div>
+          <div class="qcard__item"><span class="qcard__ic">📋</span>Professional consultation available after the assessment</div>
+          <div class="qcard__item"><span class="qcard__ic">🔒</span>Fully private, GDPR compliant, no data shared with third parties</div>
+        </div>
+        <div class="qcard__foot">
+          <button class="qbtn" onclick="window.location='https://attentiondeficittest.com/#hero-card'">Start the Assessment</button>
+          <p class="qcard__disc">By continuing you agree to our Terms &amp; Conditions. This assessment is for informational purposes only and is not a clinical diagnosis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- SIGNS -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">Recognising ADHD in Teenagers</span>
+      <h2>Signs Your Teen May Have <em>ADHD</em></h2>
+      <p>ADHD often looks different in teenagers than in younger children. As academic and social demands increase, symptoms become harder to hide and more disruptive to daily life.</p>
+    </div>
+    <div class="grid3">
+      <div class="scard"><div class="scard__ico">📚</div><h3>Academic Struggles</h3><p>Consistently underperforming despite clear intelligence. Difficulty completing homework, losing track of assignments, or leaving projects unfinished even with every intention to work.</p></div>
+      <div class="scard"><div class="scard__ico">⏰</div><h3>Time Blindness</h3><p>Chronic lateness, misjudging how long tasks take, and inability to plan ahead. Teens with ADHD often feel time passing differently, leading to missed deadlines and last-minute panic.</p></div>
+      <div class="scard"><div class="scard__ico">💥</div><h3>Emotional Outbursts</h3><p>Intense reactions that seem out of proportion. Rapid mood shifts, low frustration tolerance, and difficulty recovering from setbacks are common signs in adolescents with ADHD.</p></div>
+      <div class="scard"><div class="scard__ico">🔄</div><h3>Restlessness &amp; Fidgeting</h3><p>Difficulty sitting still in class, constant movement, or an internal feeling of always being driven. In teens this can also appear as chronic boredom and thrill-seeking behaviour.</p></div>
+      <div class="scard"><div class="scard__ico">🧩</div><h3>Hyperfocus on Interests</h3><p>Completely absorbed in preferred activities like gaming while unable to engage with anything else. This inconsistency is frequently misread by teachers and parents as laziness or defiance.</p></div>
+      <div class="scard"><div class="scard__ico">👥</div><h3>Social Difficulties</h3><p>Interrupting conversations, struggling to read social cues, or saying things impulsively that damage friendships. Many teens with ADHD feel isolated despite genuinely wanting connection.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS + WHY UNDETECTED -->
+<section class="section" style="background:var(--cream-2)" id="how-it-works">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">Simple 3-Step Process</span>
+        <h2 style="margin-bottom:14px">From Assessment to <em>Clarity</em></h2>
+        <p style="margin-bottom:32px">No GP referral needed. No waiting lists. A clear path to answers for your teenager.</p>
+        <div class="steps">
+          <div class="step"><div class="step__num">1</div><div><h3>Take the ADHD Assessment for Teens</h3><p>Complete our clinically-informed assessment in 5 to 8 minutes. Instant personalised results covering attention, impulse control, and executive function.</p></div></div>
+          <div class="step"><div class="step__num">2</div><div><h3>Review Your Results &amp; Book</h3><p>Receive a detailed results summary instantly. If a consultation is recommended, book securely through our encrypted Stripe checkout.</p></div></div>
+          <div class="step"><div class="step__num">3</div><div><h3>Meet a Licensed Assessor</h3><p>A 60-minute consultation with a specialist in adolescent ADHD, available online via secure video call or face to face. Receive a written report and personalised next steps.</p></div></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Why It Matters</span>
+        <h2 style="margin-bottom:14px">Why Teen ADHD Goes <em>Undetected</em></h2>
+        <p style="margin-bottom:4px">Teen ADHD is notoriously under-identified, particularly in girls and high-achievers who mask their symptoms effectively.</p>
+        <ul class="kp">
+          <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Frequently mistaken for laziness, attitude problems, or anxiety</li>
+          <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Girls are significantly more likely to be missed due to inattentive presentation</li>
+          <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Undiagnosed ADHD leads to lower attainment, self-esteem, and wellbeing</li>
+          <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Early assessment leads to significantly better long-term outcomes</li>
+          <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />A formal report can unlock school exam accommodations and EHCP support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNDERSTANDING ADHD IN TEENS -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">Understanding the Condition</span>
+      <h2>ADHD in Teenagers: <em>What You Need to Know</em></h2>
+      <p>Attention-Deficit/Hyperactivity Disorder is a neurodevelopmental condition that affects how the brain manages attention, impulses, and activity levels. It commonly begins in childhood but frequently continues into the teenage years and beyond.</p>
+    </div>
+    <div class="two-col" style="margin-bottom:56px">
+      <div>
+        <h3 style="margin-bottom:12px">How ADHD Changes During Adolescence</h3>
+        <p style="margin-bottom:12px;line-height:1.8">Where a child might show obvious physical hyperactivity, a teenager's symptoms frequently become internalised, presenting as restlessness, a racing mind, or persistent boredom rather than visible movement.</p>
+        <p style="margin-bottom:12px;line-height:1.8">What tends to become more visible during adolescence is the impact of inattention and poor executive function. Managing multiple subjects, homework deadlines, extracurricular commitments, and social relationships requires strong organisation and time management, precisely the skills ADHD makes harder to develop.</p>
+        <p style="line-height:1.8">Teenagers with ADHD may forget assignments, lose important items, or find it extremely difficult to begin or complete tasks even when they genuinely want to.</p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px">ADHD Does Not Define Potential</h3>
+        <p style="margin-bottom:12px;line-height:1.8">ADHD does not reflect intelligence, character, or a teenager's capacity to succeed. Many teens with ADHD are highly creative, energetic, and capable of thinking in original and innovative ways. When properly supported, these qualities become genuine strengths.</p>
+        <h3 style="margin-bottom:12px;margin-top:24px">Treatment and Support Options</h3>
+        <p style="line-height:1.8">ADHD is a manageable condition. Treatment plans typically combine behavioural strategies, structured routines, and sometimes medication. Practical approaches include breaking assignments into smaller steps, using planners and digital reminders, and learning emotional regulation strategies.</p>
+      </div>
+    </div>
+    <div class="grid3">
+      <div class="scard"><div class="scard__ico">🎯</div><h3>Inattention</h3><p>Difficulty concentrating, following instructions, or completing tasks. Easily distracted and struggling to sustain focus on anything that does not provide immediate stimulation.</p></div>
+      <div class="scard"><div class="scard__ico">⚡</div><h3>Hyperactivity</h3><p>In teens, this often shifts from visible restlessness to an internal sense of always being driven. An inability to relax and a persistent feeling of needing to be doing something.</p></div>
+      <div class="scard"><div class="scard__ico">💬</div><h3>Impulsivity</h3><p>Acting or speaking without thinking through the consequences. Interrupting others, making quick decisions that carry risk, or reacting emotionally before fully processing a situation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--cream-2)" id="faq">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">Common Questions About ADHD Testing for Teens</span>
+      <h2>Common <em>Questions</em></h2>
+      <p>Before booking an assessment, we encourage you to review our most commonly asked questions below. If you cannot find the answer you are looking for, please visit our <a href="https://attentiondeficittest.com/faqs" style="color:var(--amber);font-weight:600">full FAQ page</a> for more detailed information.</p>
+    </div>
+    <div class="flist">
+
+      <details class="fi"><summary>What is ADHD in teenagers? <span class="tog">+</span></summary><div class="fb"><p>Attention-Deficit/Hyperactivity Disorder is a neurodevelopmental condition that affects how the brain manages attention, impulses, and activity levels. While ADHD is often diagnosed in childhood, many individuals continue to experience symptoms during their teenage years. For teens, ADHD can affect school performance, relationships, organisation, and emotional regulation.</p><p>Although ADHD can create challenges, it does not limit intelligence or potential. With proper support, guidance, and treatment, teens with ADHD can develop skills that help them succeed in school and later in adulthood.</p></div></details>
+
+      <details class="fi"><summary>What are the common signs of ADHD in teenagers? <span class="tog">+</span></summary><div class="fb"><p>The symptoms of ADHD in teenagers typically fall into three categories: inattention, hyperactivity, and impulsivity. Inattention is often the most noticeable during adolescence. Teens may have difficulty concentrating in class, completing homework, or staying organised. Hyperactivity may appear as internal restlessness rather than physical movement. Impulsivity may appear as interrupting others or making quick decisions without thinking about consequences.</p><p>ADHD is typically diagnosed only when symptoms are persistent, occur in multiple settings, and significantly interfere with daily life.</p></div></details>
+
+      <details class="fi"><summary>How is ADHD diagnosed in teenagers? <span class="tog">+</span></summary><div class="fb"><p>Diagnosing ADHD in teenagers involves a comprehensive evaluation conducted by a qualified healthcare professional. ADHD cannot be diagnosed using a single test or brain scan. The evaluation usually begins with detailed interviews with the teenager and their parents or caregivers, asking about behaviour patterns, school performance, emotional wellbeing, and family history.</p><p>Clinicians also look for evidence that symptoms were present during childhood and occur in more than one environment, such as both at home and at school.</p></div></details>
+
+      <details class="fi"><summary>Why do some teens get diagnosed with ADHD later? <span class="tog">+</span></summary><div class="fb"><p>Some teenagers are diagnosed later because symptoms may not have been noticeable in early childhood. Younger children often receive more structure and support, which can help mask ADHD symptoms. As teens grow older and responsibilities increase significantly, ADHD symptoms may become more obvious.</p><p>In some cases, symptoms may have been misinterpreted as laziness, lack of motivation, or behavioural problems. A proper assessment helps clarify the underlying cause.</p></div></details>
+
+      <details class="fi"><summary>Can ADHD affect a teenager's school performance? <span class="tog">+</span></summary><div class="fb"><p>ADHD can significantly affect academic performance because it impacts attention, organisation, and the ability to complete tasks. Teenagers with ADHD may struggle to stay focused during lessons or complete homework assignments on time.</p><p>Importantly, academic difficulties caused by ADHD do not reflect a student's intelligence. With proper support, strategies, and sometimes school accommodations, many teens with ADHD make significant improvements in their academic performance.</p></div></details>
+
+      <details class="fi"><summary>Can the assessment report be used for school exam support? <span class="tog">+</span></summary><div class="fb"><p>Yes. Our Comprehensive package includes a formal written report and support letter that can be submitted to schools or colleges to access reasonable adjustments such as extra time in exams, a quiet room, or a scribe. Many clients also use their reports to support EHCP applications or 504 plans.</p></div></details>
+
+      <details class="fi"><summary>What treatments are available for teenagers with ADHD? <span class="tog">+</span></summary><div class="fb"><p>ADHD treatment for teenagers often involves a combination of strategies tailored to the individual. These may include behavioural therapy, educational support, and in some cases medication. Behavioural therapy helps teens develop practical skills for organisation, time management, and emotional regulation.</p><p>Practical day-to-day strategies, including using planners, breaking tasks into smaller steps, and building structured routines, are also highly effective.</p></div></details>
+
+      <details class="fi"><summary>When should parents consider ADHD testing for their teenager? <span class="tog">+</span></summary><div class="fb"><p>Parents may want to consider ADHD testing if their teenager consistently struggles with attention, organisation, or impulse control in ways that are affecting daily life. Signs such as declining grades, consistently unfinished assignments, or ongoing difficulties focusing at school may indicate that an evaluation is worthwhile.</p><p>Early evaluation can identify whether ADHD is the underlying cause and help guide appropriate and timely support.</p></div></details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-block">
+      <span class="eyebrow">Take The First Step</span>
+      <h2>Your Teenager Deserves Answers. <em>Start Today.</em></h2>
+      <p>Our assessment takes 5 to 8 minutes. Instant results, no GP referral needed, professional consultations available online or face to face in over 40 countries.</p>
+      <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Start the ADHD Assessment for Teens</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">🧠 AttentionDeficitTest<span>.com</span></div>
+        <p class="foot-tagline">Clinically-informed online ADHD assessment and professional consultation. Helping individuals worldwide get the answers they need.</p>
+        <p class="foot-tagline" style="margin-top:8px">This website provides an informational assessment only and is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+      </div>
+      <div class="foot-col"><h4>Services</h4><a href="https://attentiondeficittest.com/#hero-card">ADHD Assessment</a><a href="https://attentiondeficittest.com/#pricing">Professional Consultation</a><a href="https://attentiondeficittest.com/#pricing">Comprehensive Assessment</a><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></div>
+      <div class="foot-col"><h4>Learn</h4><a href="https://attentiondeficittest.com/#about">What is ADHD?</a><a href="#">ADHD in Teens</a><a href="https://attentiondeficittest.com/#about">ADHD in Adults</a><a href="https://attentiondeficittest.com/faqs">FAQ</a></div>
+      <div class="foot-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a><a href="#">Contact Us</a></div>
+    </div>
+    <div class="foot-bottom">© 2025 AttentionDeficitTest.com — All rights reserved. SSL Secured · GDPR Compliant · Worldwide</div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solid',scrollY>30));
+  document.getElementById('nav').classList.add('solid');
+</script>
+</body>
+</html>

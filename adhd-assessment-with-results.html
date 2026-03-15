@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADHD Assessment | AttentionDeficitTest.com</title>
+  <meta name="description" content="Take our clinically-informed 100-question ADHD assessment and receive your personalised results instantly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,300;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark:#12100e; --dark-2:#1c1a17; --dark-3:#252219;
+      --ink:#1e1c19; --ink-soft:#5c5850; --ink-muted:#9a9288;
+      --cream:#faf8f4; --cream-2:#f2ede6; --white:#ffffff;
+      --amber:#e8a020; --amber-lt:#f5c060; --amber-glow:rgba(232,160,32,.15);
+      --green:#22c55e; --green-glow:rgba(34,197,94,.12);
+      --red:#e05c4a; --red-glow:rgba(224,92,74,.12);
+      --border:rgba(30,28,25,.1);
+      --r:16px; --r-lg:24px;
+      --serif:'Fraunces',Georgia,serif; --sans:'Plus Jakarta Sans',sans-serif;
+      --sh-sm:0 2px 12px rgba(0,0,0,.06); --sh-md:0 8px 32px rgba(0,0,0,.1); --sh-lg:0 20px 60px rgba(0,0,0,.14);
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+    html { scroll-behavior:smooth }
+    body { font-family:var(--sans); background:var(--cream); color:var(--ink); line-height:1.65; overflow-x:hidden }
+    h1,h2,h3 { font-family:var(--serif); line-height:1.15 }
+    p { color:var(--ink-soft); font-size:.96rem }
+    a { color:inherit; text-decoration:none }
+    .container { max-width:720px; margin:0 auto; padding:0 24px }
+    .container-wide { max-width:1120px; margin:0 auto; padding:0 24px }
+
+    /* NAV */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:900; padding:16px 0; background:rgba(18,16,14,.96); backdrop-filter:blur(20px); box-shadow:0 1px 0 rgba(255,255,255,.06) }
+    .nav__inner { max-width:1120px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between }
+    .nav__logo { font-family:var(--serif); font-weight:700; font-size:1.05rem; color:#fff; display:flex; align-items:center; gap:10px }
+    .nav__logo-ic { width:32px; height:32px; background:var(--amber); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1.1rem }
+    .nav__links { display:flex; gap:28px; list-style:none }
+    .nav__links a { font-size:.88rem; font-weight:500; color:rgba(255,255,255,.55); transition:color .2s }
+    .nav__links a:hover { color:#fff }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; font-family:var(--sans); font-weight:700; cursor:pointer; border:none; border-radius:100px; transition:transform .22s,box-shadow .22s,background .22s }
+    .btn:hover { transform:translateY(-2px) }
+    .btn-amber { background:var(--amber); color:var(--dark); padding:13px 28px; font-size:.95rem; box-shadow:0 6px 28px rgba(232,160,32,.38) }
+    .btn-amber:hover { background:var(--amber-lt); box-shadow:0 12px 40px rgba(232,160,32,.5) }
+    @media(max-width:768px) { .nav__links { display:none } }
+
+    /* ═══════════════════════════════
+       VIEWS — only one visible at a time
+    ═══════════════════════════════ */
+    .view { display:none }
+    .view.active { display:block }
+
+    /* ═══════════════════════════════
+       ASSESSMENT VIEW
+    ═══════════════════════════════ */
+    #view-assessment { padding-top:100px; padding-bottom:100px; min-height:100vh }
+
+    /* Progress bar */
+    .progress-bar-wrap { position:fixed; bottom:0; left:0; right:0; z-index:800; background:rgba(18,16,14,.95); backdrop-filter:blur(12px); border-top:1px solid rgba(255,255,255,.08); padding:14px 24px }
+    .progress-bar-inner { max-width:720px; margin:0 auto; display:flex; align-items:center; gap:16px }
+    .progress-track { flex:1; height:6px; background:rgba(255,255,255,.1); border-radius:3px; overflow:hidden }
+    .progress-fill { height:6px; background:var(--amber); border-radius:3px; transition:width .4s ease }
+    .progress-label { font-size:.78rem; font-weight:600; color:rgba(255,255,255,.45); white-space:nowrap }
+    .btn-back { background:rgba(255,255,255,.08); border:1.5px solid rgba(255,255,255,.12); color:rgba(255,255,255,.6); font-family:var(--sans); font-size:.82rem; font-weight:600; padding:8px 16px; border-radius:100px; cursor:pointer; transition:all .2s }
+    .btn-back:hover { border-color:rgba(255,255,255,.3); color:#fff }
+    .btn-back:disabled { opacity:.25; cursor:default; pointer-events:none }
+    .btn-next { background:var(--amber); color:var(--dark); font-family:var(--sans); font-size:.9rem; font-weight:700; padding:10px 28px; border-radius:100px; border:none; cursor:pointer; transition:all .2s; box-shadow:0 4px 16px rgba(232,160,32,.3) }
+    .btn-next:hover:not(:disabled) { background:var(--amber-lt); transform:translateY(-1px) }
+    .btn-next:disabled { background:rgba(255,255,255,.12); color:rgba(255,255,255,.3); box-shadow:none; cursor:default }
+
+    /* Screen header */
+    .screen-header { text-align:center; margin-bottom:28px }
+    .screen-tag { display:inline-block; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--amber); background:var(--amber-glow); border:1px solid rgba(232,160,32,.2); padding:5px 14px; border-radius:100px; margin-bottom:12px }
+    .screen-header h2 { font-size:1.1rem; color:var(--ink); font-family:var(--sans); font-weight:600 }
+
+    /* Scale legend */
+    .scale-legend { display:flex; justify-content:center; gap:12px; margin-bottom:24px; flex-wrap:wrap }
+    .scale-legend span { display:flex; align-items:center; gap:5px; font-size:.7rem; color:var(--ink-muted); font-weight:500 }
+    .dot-sm { width:13px; height:13px; border-radius:50%; border:2px solid; display:inline-block; flex-shrink:0 }
+    .c-sd { background:#ffd6d6; border-color:#f4a5a5 }
+    .c-dg { background:#fde8c8; border-color:#f5c878 }
+    .c-nt { background:#e8edf2; border-color:#c5ced9 }
+    .c-ag { background:#d4edd6; border-color:#8ecf92 }
+    .c-sa { background:#cce8e8; border-color:#72bfbf }
+
+    /* Question card */
+    .q-card { background:#fff; border-radius:14px; padding:20px 22px 18px; margin-bottom:10px; box-shadow:var(--sh-sm) }
+    .q-text { font-size:.9rem; color:var(--ink); text-align:center; margin-bottom:16px; line-height:1.55; font-weight:500 }
+    .q-options { display:flex; justify-content:center; gap:10px }
+    .q-opt { display:flex; flex-direction:column; align-items:center; gap:5px; font-size:.62rem; color:var(--ink-muted); text-align:center; width:60px; cursor:pointer }
+    .q-opt .dot { width:36px; height:36px; border-radius:50%; border:2.5px solid; transition:transform .15s, box-shadow .15s }
+    .q-opt:hover .dot { transform:scale(1.1) }
+    .q-opt.selected.opt-sd .dot { background:#ffd6d6; border-color:#f4a5a5; border-width:4px; box-shadow:0 0 0 3px rgba(244,165,165,.3) }
+    .q-opt.selected.opt-dg .dot { background:#fde8c8; border-color:#f5c878; border-width:4px; box-shadow:0 0 0 3px rgba(245,200,120,.3) }
+    .q-opt.selected.opt-nt .dot { background:#e8edf2; border-color:#c5ced9; border-width:4px; box-shadow:0 0 0 3px rgba(197,206,217,.35) }
+    .q-opt.selected.opt-ag .dot { background:#d4edd6; border-color:#8ecf92; border-width:4px; box-shadow:0 0 0 3px rgba(142,207,146,.3) }
+    .q-opt.selected.opt-sa .dot { background:#cce8e8; border-color:#72bfbf; border-width:4px; box-shadow:0 0 0 3px rgba(114,191,191,.3) }
+    .all-answered-note { text-align:center; font-size:.74rem; color:var(--green); margin-top:6px; font-weight:600 }
+    @media(max-width:480px) { .q-opt { width:48px; font-size:.56rem } .q-opt .dot { width:28px; height:28px } .q-options { gap:6px } }
+
+
+    /* ═══════════════════════════════
+       PAYMENT VIEW
+    ═══════════════════════════════ */
+    #view-payment { padding:120px 0 80px; min-height:100vh; display:none }
+    #view-payment.active { display:block }
+
+    .payment-wrap { max-width:520px; margin:0 auto; padding:0 24px }
+    .payment-header { text-align:center; margin-bottom:36px }
+    .payment-icon { width:64px; height:64px; background:var(--amber-glow); border:2px solid rgba(232,160,32,.25); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 20px }
+    .payment-header h1 { font-size:clamp(1.7rem,4vw,2.2rem); color:var(--ink); margin-bottom:12px }
+    .payment-header p { font-size:.96rem; max-width:400px; margin:0 auto }
+
+    /* What you get */
+    .payment-includes { background:#fff; border-radius:var(--r-lg); padding:28px 32px; box-shadow:var(--sh-sm); margin-bottom:24px }
+    .payment-includes h3 { font-size:1rem; margin-bottom:16px; color:var(--ink) }
+    .include-list { list-style:none; display:flex; flex-direction:column; gap:11px }
+    .include-list li { display:flex; align-items:center; gap:12px; font-size:.9rem; color:var(--ink-soft) }
+    .include-list li::before { content:'✓'; width:22px; height:22px; background:var(--green-glow); color:var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.72rem; font-weight:700; flex-shrink:0; text-align:center; line-height:22px }
+
+    /* Price card */
+    .price-card { background:var(--dark); border-radius:var(--r-lg); padding:32px; box-shadow:var(--sh-lg); margin-bottom:20px; text-align:center; position:relative; overflow:hidden }
+    .price-card::before { content:''; position:absolute; width:300px; height:300px; background:radial-gradient(circle,rgba(232,160,32,.15) 0%,transparent 70%); top:-100px; right:-80px; pointer-events:none }
+    .price-card .badge { display:inline-block; background:var(--amber-glow); color:var(--amber); border:1px solid rgba(232,160,32,.3); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:5px 14px; border-radius:100px; margin-bottom:16px }
+    .price-card .amount { font-family:var(--serif); font-size:4rem; font-weight:700; color:#fff; line-height:1; margin-bottom:4px }
+    .price-card .amount sup { font-size:1.8rem; vertical-align:super; line-height:0 }
+    .price-card .amount-sub { color:rgba(255,255,255,.4); font-size:.82rem; margin-bottom:24px }
+
+    /* Stripe-style card form */
+    .stripe-form { background:rgba(255,255,255,.05); border:1.5px solid rgba(255,255,255,.1); border-radius:var(--r); padding:22px; margin-bottom:20px; text-align:left }
+    .form-row { margin-bottom:14px }
+    .form-row:last-child { margin-bottom:0 }
+    .form-row label { display:block; font-size:.72rem; font-weight:600; color:rgba(255,255,255,.45); text-transform:uppercase; letter-spacing:.06em; margin-bottom:6px }
+    .form-input { width:100%; background:rgba(255,255,255,.07); border:1.5px solid rgba(255,255,255,.12); border-radius:10px; padding:12px 14px; color:#fff; font-family:var(--sans); font-size:.92rem; outline:none; transition:border-color .2s }
+    .form-input::placeholder { color:rgba(255,255,255,.25) }
+    .form-input:focus { border-color:var(--amber) }
+    .form-row-split { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+    .card-icons { display:flex; gap:6px; margin-bottom:14px; align-items:center }
+    .card-icon { background:rgba(255,255,255,.08); border-radius:5px; padding:4px 8px; font-size:.7rem; color:rgba(255,255,255,.45); font-weight:600; border:1px solid rgba(255,255,255,.1) }
+
+    .pay-btn { width:100%; padding:17px; background:var(--amber); color:var(--dark); font-family:var(--sans); font-weight:700; font-size:1rem; border:none; border-radius:100px; cursor:pointer; box-shadow:0 6px 28px rgba(232,160,32,.4); transition:all .2s; display:flex; align-items:center; justify-content:center; gap:10px }
+    .pay-btn:hover { background:var(--amber-lt); transform:translateY(-2px); box-shadow:0 10px 36px rgba(232,160,32,.5) }
+
+    .payment-trust { display:flex; align-items:center; justify-content:center; gap:18px; margin-top:16px; flex-wrap:wrap }
+    .payment-trust span { font-size:.72rem; color:rgba(255,255,255,.3); display:flex; align-items:center; gap:5px }
+
+    .payment-disclaimer { text-align:center; margin-top:20px; font-size:.76rem; color:var(--ink-muted); line-height:1.6 }
+
+
+    /* ═══════════════════════════════
+       PROCESSING OVERLAY
+    ═══════════════════════════════ */
+    #processing-overlay { display:none; position:fixed; inset:0; background:rgba(18,16,14,.92); z-index:9999; align-items:center; justify-content:center; flex-direction:column; gap:20px }
+    #processing-overlay.active { display:flex }
+    .spinner { width:48px; height:48px; border:4px solid rgba(255,255,255,.1); border-top-color:var(--amber); border-radius:50%; animation:spin .8s linear infinite }
+    @keyframes spin { to { transform:rotate(360deg) } }
+    .processing-text { color:#fff; font-weight:600; font-size:1rem }
+    .processing-sub { color:rgba(255,255,255,.4); font-size:.84rem }
+
+
+    /* ═══════════════════════════════
+       RESULTS VIEW
+    ═══════════════════════════════ */
+    #view-results { padding:100px 0 80px; display:none }
+    #view-results.active { display:block }
+
+    .result-hero { padding:52px 0 40px; text-align:center }
+    .result-badge { display:inline-flex; align-items:center; gap:8px; padding:9px 20px; border-radius:100px; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-bottom:24px }
+    .result-score-ring { width:130px; height:130px; border-radius:50%; border:6px solid; display:flex; flex-direction:column; align-items:center; justify-content:center; margin:0 auto 24px }
+    .score-num { font-family:var(--serif); font-size:2.2rem; font-weight:700; line-height:1 }
+    .score-lbl { font-size:.68rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; margin-top:4px }
+    .result-hero h1 { font-size:clamp(1.7rem,4vw,2.5rem); margin-bottom:14px }
+    .result-hero .lead { font-size:1rem; max-width:520px; margin:0 auto 28px; color:var(--ink-soft) }
+
+    .domains { padding:0 0 44px }
+    .domains h2 { font-size:1.3rem; margin-bottom:6px }
+    .domains__grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px; margin-top:20px }
+    .domain-card { background:#fff; border-radius:12px; padding:16px 18px; box-shadow:var(--sh-sm) }
+    .domain-card__label { font-size:.72rem; font-weight:600; color:var(--ink-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:.04em; line-height:1.3 }
+    .domain-bar-wrap { background:var(--cream-2); border-radius:100px; height:7px; overflow:hidden }
+    .domain-bar { height:7px; border-radius:100px }
+    .domain-card__score { font-size:.8rem; font-weight:700; margin-top:7px }
+
+    .meaning { background:#fff; border-radius:var(--r-lg); padding:36px; box-shadow:var(--sh-sm); margin-bottom:20px }
+    .meaning h2 { font-size:1.3rem; margin-bottom:16px }
+    .meaning-list { list-style:none; display:flex; flex-direction:column; gap:11px }
+    .meaning-list li { display:flex; align-items:flex-start; gap:12px; font-size:.9rem; color:var(--ink-soft); line-height:1.55 }
+    .meaning-list li .icon { width:22px; height:22px; border-radius:50%; flex-shrink:0; margin-top:1px; display:flex; align-items:center; justify-content:center; font-size:.7rem; font-weight:700 }
+
+    .next-steps { margin-bottom:20px }
+    .next-steps h2 { font-size:1.3rem; margin-bottom:16px }
+    .steps-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px }
+    .step-card { background:#fff; border-radius:var(--r); padding:22px; box-shadow:var(--sh-sm); border-top:3px solid }
+    .step-card__num { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px }
+    .step-card h3 { font-size:.98rem; margin-bottom:7px }
+    .step-card p { font-size:.84rem }
+
+    .disclaimer { background:var(--cream-2); border-radius:var(--r); padding:22px 26px; display:flex; gap:14px; align-items:flex-start; margin-bottom:24px }
+    .disclaimer__icon { font-size:1.3rem; flex-shrink:0; margin-top:2px }
+    .disclaimer__text { font-size:.82rem; color:var(--ink-soft); line-height:1.6 }
+    .disclaimer__text strong { color:var(--ink); display:block; margin-bottom:3px }
+
+    /* Upsell CTA */
+    .upsell { background:var(--dark); border-radius:var(--r-lg); padding:44px 40px; margin-bottom:52px; position:relative; overflow:hidden }
+    .upsell::before { content:''; position:absolute; width:400px; height:400px; background:radial-gradient(circle,rgba(232,160,32,.12) 0%,transparent 70%); top:-150px; right:-100px; pointer-events:none }
+    .upsell__header { margin-bottom:28px }
+    .upsell__header h2 { font-size:clamp(1.3rem,2.5vw,1.8rem); color:#fff; margin-bottom:10px }
+    .upsell__header p { color:rgba(255,255,255,.5); font-size:.9rem }
+    .upsell-cards { display:grid; grid-template-columns:1fr 1fr; gap:16px }
+    .upsell-card { background:rgba(255,255,255,.06); border:1.5px solid rgba(255,255,255,.1); border-radius:var(--r); padding:24px; transition:border-color .2s; cursor:pointer; display:block }
+    .upsell-card:hover { border-color:var(--amber) }
+    .upsell-card__tag { font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--amber); margin-bottom:10px }
+    .upsell-card h3 { color:#fff; font-size:1rem; margin-bottom:6px }
+    .upsell-card p { color:rgba(255,255,255,.4); font-size:.8rem; margin-bottom:16px }
+    .upsell-card .upsell-price { font-family:var(--serif); font-size:2rem; font-weight:700; color:var(--amber) }
+    .upsell-card .upsell-price-sub { font-size:.72rem; color:rgba(255,255,255,.3); margin-top:2px }
+    .upsell-card .upsell-btn { display:inline-flex; align-items:center; gap:6px; margin-top:14px; background:var(--amber); color:var(--dark); font-family:var(--sans); font-weight:700; font-size:.84rem; padding:10px 20px; border-radius:100px; border:none; cursor:pointer; transition:all .2s }
+    .upsell-card .upsell-btn:hover { background:var(--amber-lt) }
+    @media(max-width:600px) { .upsell-cards { grid-template-columns:1fr } .upsell { padding:28px 22px } }
+
+    /* Colour themes */
+    .theme-low .result-badge { background:var(--green-glow); color:var(--green); border:1px solid rgba(34,197,94,.25) }
+    .theme-low .result-score-ring { border-color:var(--green) }
+    .theme-low .score-num,.theme-low .score-lbl { color:var(--green) }
+    .theme-low .domain-bar { background:var(--green) }
+    .theme-low .domain-card__score { color:var(--green) }
+    .theme-low .meaning-list li .icon { background:var(--green-glow); color:var(--green) }
+    .theme-low .step-card { border-top-color:var(--green) }
+    .theme-low .step-card__num { color:var(--green) }
+
+    .theme-moderate .result-badge { background:var(--amber-glow); color:var(--amber); border:1px solid rgba(232,160,32,.25) }
+    .theme-moderate .result-score-ring { border-color:var(--amber) }
+    .theme-moderate .score-num,.theme-moderate .score-lbl { color:var(--amber) }
+    .theme-moderate .domain-bar { background:var(--amber) }
+    .theme-moderate .domain-card__score { color:var(--amber) }
+    .theme-moderate .meaning-list li .icon { background:var(--amber-glow); color:var(--amber) }
+    .theme-moderate .step-card { border-top-color:var(--amber) }
+    .theme-moderate .step-card__num { color:var(--amber) }
+
+    .theme-high .result-badge { background:var(--red-glow); color:var(--red); border:1px solid rgba(224,92,74,.25) }
+    .theme-high .result-score-ring { border-color:var(--red) }
+    .theme-high .score-num,.theme-high .score-lbl { color:var(--red) }
+    .theme-high .domain-bar { background:var(--red) }
+    .theme-high .domain-card__score { color:var(--red) }
+    .theme-high .meaning-list li .icon { background:var(--red-glow); color:var(--red) }
+    .theme-high .step-card { border-top-color:var(--red) }
+    .theme-high .step-card__num { color:var(--red) }
+
+    /* FOOTER */
+    footer { background:var(--dark); padding:44px 0 28px; border-top:1px solid rgba(255,255,255,.06); display:none }
+    footer.visible { display:block }
+    .footer__inner { max-width:1120px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:1.8fr 1fr 1fr; gap:44px }
+    .footer__brand p { color:rgba(255,255,255,.35); font-size:.82rem; margin-top:12px; max-width:260px }
+    .footer__col h4 { font-size:.76rem; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:rgba(255,255,255,.35); margin-bottom:14px }
+    .footer__col ul { list-style:none; display:flex; flex-direction:column; gap:9px }
+    .footer__col ul li a { font-size:.84rem; color:rgba(255,255,255,.5); transition:color .2s }
+    .footer__col ul li a:hover { color:#fff }
+    .footer__bottom { max-width:1120px; margin:32px auto 0; padding:22px 24px 0; border-top:1px solid rgba(255,255,255,.06); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px }
+    .footer__bottom p { font-size:.76rem; color:rgba(255,255,255,.25) }
+    @media(max-width:768px) { .footer__inner { grid-template-columns:1fr; gap:24px } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="https://attentiondeficittest.com/" class="nav__logo">
+      <div class="nav__logo-ic">🧠</div>
+      <span>AttentionDeficitTest<span style="color:var(--amber)">.com</span></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></li>
+      <li><a href="https://attentiondeficittest.com/adhd">About ADHD</a></li>
+      <li><a href="https://attentiondeficittest.com/#pricing">Pricing</a></li>
+      <li><a href="https://attentiondeficittest.com/faqs">FAQ</a></li>
+    </ul>
+    <a href="https://attentiondeficittest.com/assessment" class="btn btn-amber">Start Assessment</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     VIEW 1: ASSESSMENT (100 questions)
+══════════════════════════════════════ -->
+<div id="view-assessment" class="view active">
+  <div class="container">
+    <div id="screens-container"></div>
+  </div>
+</div>
+
+<!-- Fixed progress bar (assessment only) -->
+<div class="progress-bar-wrap" id="progress-bar">
+  <div class="progress-bar-inner">
+    <button class="btn-back" id="btn-back" onclick="prevScreen()" disabled>← Back</button>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:5%"></div></div>
+    <span class="progress-label" id="progress-label">Screen 1 of 20</span>
+    <button class="btn-next" id="btn-next" onclick="nextScreen()" disabled>Next →</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     VIEW 2: PAYMENT
+══════════════════════════════════════ -->
+<div id="view-payment" class="view">
+  <div class="payment-wrap">
+
+    <div class="payment-header">
+      <div class="payment-icon">🔒</div>
+      <h1>Your results are ready</h1>
+      <p>Unlock your personalised ADHD assessment results for a one-time payment of just £2.99.</p>
+    </div>
+
+    <div class="payment-includes">
+      <h3>What you get</h3>
+      <ul class="include-list">
+        <li>Your overall ADHD likelihood score out of 400</li>
+        <li>Breakdown across all 20 symptom domains</li>
+        <li>Personalised interpretation of your results</li>
+        <li>Recommended next steps tailored to your score</li>
+        <li>Instant access — results revealed immediately after payment</li>
+      </ul>
+    </div>
+
+    <div class="price-card">
+      <div class="badge">One-Time Payment</div>
+      <div class="amount"><sup>£</sup>2.99</div>
+      <div class="amount-sub">Instant access to your full results</div>
+
+      <div class="card-icons">
+        <span class="card-icon">VISA</span>
+        <span class="card-icon">MC</span>
+        <span class="card-icon">AMEX</span>
+        <span class="card-icon">🔒 Stripe</span>
+      </div>
+
+      <div class="stripe-form">
+        <div class="form-row">
+          <label>Email address</label>
+          <input class="form-input" type="email" placeholder="you@example.com" id="pay-email" />
+        </div>
+        <div class="form-row">
+          <label>Card number</label>
+          <input class="form-input" type="text" placeholder="1234 5678 9012 3456" maxlength="19" id="pay-card" oninput="formatCard(this)" />
+        </div>
+        <div class="form-row form-row-split">
+          <div>
+            <label>Expiry</label>
+            <input class="form-input" type="text" placeholder="MM / YY" maxlength="7" id="pay-expiry" oninput="formatExpiry(this)" />
+          </div>
+          <div>
+            <label>CVC</label>
+            <input class="form-input" type="text" placeholder="123" maxlength="3" id="pay-cvc" />
+          </div>
+        </div>
+      </div>
+
+      <button class="pay-btn" onclick="processPayment()">
+        <span>🔒</span> Pay £2.99 and Unlock Results
+      </button>
+
+      <!-- TEMPORARY TEST SKIP — remove before going live -->
+      <div style="text-align:center;margin-top:14px">
+        <button onclick="showResults()" style="background:none;border:1px dashed rgba(255,255,255,.2);color:rgba(255,255,255,.35);font-family:var(--sans);font-size:.76rem;padding:7px 18px;border-radius:100px;cursor:pointer;transition:all .2s" onmouseover="this.style.borderColor='rgba(255,255,255,.5)';this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,.2)';this.style.color='rgba(255,255,255,.35)'">
+          ⚙ Skip Payment (Test Mode)
+        </button>
+      </div>
+      <!-- END TEST SKIP -->
+
+      <div class="payment-trust">
+        <span>🔒 256-bit SSL</span>
+        <span>⚡ Instant Access</span>
+        <span>✓ GDPR Compliant</span>
+        <span>🔁 Cancel Anytime</span>
+      </div>
+    </div>
+
+    <p class="payment-disclaimer">
+      By completing payment you agree to our <a href="#" style="text-decoration:underline;color:var(--ink-soft)">Terms &amp; Conditions</a>. This assessment is for informational purposes only and is not a clinical diagnosis. Powered by Stripe. Your card details are never stored by us.
+    </p>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PROCESSING OVERLAY
+══════════════════════════════════════ -->
+<div id="processing-overlay">
+  <div class="spinner"></div>
+  <div class="processing-text">Processing your payment…</div>
+  <div class="processing-sub">Please do not close this window</div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     VIEW 3: RESULTS
+══════════════════════════════════════ -->
+<div id="view-results" class="view">
+  <div class="container">
+
+    <div class="result-hero" id="result-hero">
+      <div class="result-badge" id="result-badge"></div>
+      <div class="result-score-ring">
+        <span class="score-num" id="result-score-num"></span>
+        <span class="score-lbl">/ 400</span>
+      </div>
+      <h1 id="result-title"></h1>
+      <p class="lead" id="result-lead"></p>
+    </div>
+
+    <div class="domains">
+      <h2>Your Results by Domain</h2>
+      <p style="font-size:.85rem">How your answers scored across each of the 20 areas assessed.</p>
+      <div class="domains__grid" id="domains-grid"></div>
+    </div>
+
+    <div class="meaning" id="meaning-block">
+      <h2>What This Means</h2>
+      <ul class="meaning-list" id="meaning-list"></ul>
+    </div>
+
+    <div class="next-steps">
+      <h2 id="steps-title">Suggested Next Steps</h2>
+      <div class="steps-grid" id="steps-grid"></div>
+    </div>
+
+    <div class="disclaimer">
+      <div class="disclaimer__icon">ℹ️</div>
+      <div class="disclaimer__text" id="disclaimer-text"></div>
+    </div>
+
+    <!-- Upsell -->
+    <div class="upsell">
+      <div class="upsell__header">
+        <h2 id="upsell-title">Want a Full Clinical Assessment?</h2>
+        <p id="upsell-body">Speak directly with a licensed ADHD assessor who can evaluate your results in full clinical detail and guide you through your next steps.</p>
+      </div>
+      <div class="upsell-cards">
+        <a href="https://attentiondeficittest.com/#pricing" class="upsell-card">
+          <div class="upsell-card__tag">Most Popular</div>
+          <h3>Professional Consultation</h3>
+          <p>60-minute 1-to-1 video call with a licensed assessor. Personalised report included.</p>
+          <div class="upsell-price">£149</div>
+          <div class="upsell-price-sub">one-off payment</div>
+          <button class="upsell-btn">Book Now →</button>
+        </a>
+        <a href="https://attentiondeficittest.com/#pricing" class="upsell-card">
+          <div class="upsell-card__tag">Full Package</div>
+          <h3>Comprehensive Assessment</h3>
+          <p>Full diagnostic assessment, written report, and follow-up consultation included.</p>
+          <div class="upsell-price">£299</div>
+          <div class="upsell-price-sub">one-off payment</div>
+          <button class="upsell-btn">Book Now →</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="https://attentiondeficittest.com/" style="display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff">
+        <div style="width:32px;height:32px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem">🧠</div>
+        AttentionDeficitTest<span style="color:var(--amber)">.com</span>
+      </a>
+      <p>Clinically-informed ADHD assessment and professional consultation. Available worldwide.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="https://attentiondeficittest.com/adhd">What is ADHD?</a></li>
+        <li><a href="https://attentiondeficittest.com/adhd-test-for-adults">ADHD Test for Adults</a></li>
+        <li><a href="https://attentiondeficittest.com/adhd-test-for-teens">ADHD Test for Teens</a></li>
+        <li><a href="https://attentiondeficittest.com/faqs">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Assessment</h4>
+      <ul>
+        <li><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></li>
+        <li><a href="https://attentiondeficittest.com/#pricing">Pricing</a></li>
+        <li><a href="https://attentiondeficittest.com/#book">Start Assessment</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 AttentionDeficitTest.com. For informational purposes only. Not a substitute for professional medical advice.</p>
+    <p>GDPR Compliant · Secure Payments via Stripe</p>
+  </div>
+</footer>
+
+
+<script>
+// ─────────────────────────────────────────
+// QUESTION DATA
+// ─────────────────────────────────────────
+const SECTIONS = [
+  { title:"Attention & Focus", reversed:[2], qs:[
+    "I often find it difficult to maintain focus on tasks that require sustained mental effort.",
+    "My mind frequently wanders when I am reading, in meetings, or doing routine work.",
+    "I can easily concentrate on a single task for an extended period without distraction.",
+    "I often lose track of what I was doing when I am interrupted, even briefly.",
+    "I have difficulty finishing projects once the initial excitement has worn off."
+  ]},
+  { title:"Organisation", reversed:[2], qs:[
+    "I frequently misplace things I need daily, such as keys, phone, or important documents.",
+    "Keeping my living or work space organised feels like a constant struggle.",
+    "I find it easy to plan and prioritise my tasks for the day ahead.",
+    "I often avoid or put off tasks that require a lot of mental organisation or planning.",
+    "I frequently forget appointments, deadlines, or obligations, even important ones."
+  ]},
+  { title:"Impulsivity", reversed:[2], qs:[
+    "I often blurt out answers or comments before others have finished speaking.",
+    "I have difficulty waiting my turn in conversations, queues, or group activities.",
+    "I tend to think carefully before I act, even in social situations.",
+    "I make impulsive decisions that I later regret, without thinking through consequences.",
+    "I frequently interrupt others or finish their sentences for them."
+  ]},
+  { title:"Hyperactivity & Restlessness", reversed:[2], qs:[
+    "I feel physically restless and find it difficult to sit still for extended periods.",
+    "I feel an inner sense of restlessness or driven by a motor even when I am sitting.",
+    "I find it easy to engage in quiet leisure activities without becoming restless.",
+    "I frequently fidget with objects, tap my hands or feet, or squirm in my seat.",
+    "I talk excessively or feel compelled to speak even when it is inappropriate."
+  ]},
+  { title:"Time Management", reversed:[2], qs:[
+    "I consistently underestimate how long tasks will take, causing me to run late.",
+    "I often arrive late to appointments, meetings, or social engagements.",
+    "Managing my time effectively comes naturally and rarely causes me stress.",
+    "I struggle to start tasks on time, even when I know the deadline is approaching.",
+    "I frequently find myself doing unimportant things instead of priority tasks."
+  ]},
+  { title:"Emotional Regulation", reversed:[2], qs:[
+    "I experience sudden, intense mood shifts that others find difficult to understand.",
+    "I feel easily frustrated or overwhelmed by tasks that others seem to manage easily.",
+    "I generally maintain an even emotional state throughout the day.",
+    "Small setbacks can quickly lead me to feelings of intense frustration or anger.",
+    "I often feel overwhelmed by everyday responsibilities in a way that disrupts my functioning."
+  ]},
+  { title:"Working Memory", reversed:[2], qs:[
+    "I frequently forget what I was about to say mid-sentence or during a conversation.",
+    "I struggle to hold instructions in my head long enough to carry them out correctly.",
+    "I can easily recall details from conversations or instructions I was given earlier.",
+    "I often need to re-read material multiple times before it registers in my memory.",
+    "I frequently start sentences or tasks and then forget where I was going with them."
+  ]},
+  { title:"Hyperfocus", reversed:[2], qs:[
+    "I sometimes become so deeply absorbed in an activity that I lose track of time completely.",
+    "When something interests me deeply, I find it very difficult to switch to another task.",
+    "I transition smoothly between tasks and activities without becoming overly absorbed.",
+    "I have experienced periods of intense prolonged focus on a topic I find exciting.",
+    "People around me have commented that I seem in my own world at times."
+  ]},
+  { title:"Social & Relationships", reversed:[2], qs:[
+    "I have struggled to maintain friendships or relationships due to forgetfulness or inattention.",
+    "Others have told me I seem distracted, disorganised, or scattered in my daily life.",
+    "I am generally considered reliable and dependable by the people who know me.",
+    "I have experienced difficulties at work or school due to attention or organisational problems.",
+    "My attention difficulties have negatively impacted important areas of my life."
+  ]},
+  { title:"Sleep & Rest", reversed:[2], qs:[
+    "My mind races at night, making it very difficult to fall asleep or switch off.",
+    "I often feel mentally exhausted but physically unable to rest or relax.",
+    "I generally have a regular sleep pattern and wake feeling refreshed.",
+    "I find it very difficult to wind down in the evening without external distractions.",
+    "I often feel chronically tired, yet struggle to nap or sleep even when I have the chance."
+  ]},
+  { title:"Childhood History", reversed:[2], qs:[
+    "As a child, teachers or parents described me as distracted, dreamy, or hard to engage.",
+    "I frequently got into trouble at school for not completing work or being disruptive.",
+    "School came easily to me and I consistently performed at the level expected of me.",
+    "I was described as hyperactive, always moving, or never listening as a child.",
+    "Symptoms of inattention or restlessness have been present in my life since childhood."
+  ]},
+  { title:"Sensory & Environment", reversed:[2], qs:[
+    "I am easily distracted by background noises, movement, or visual stimuli around me.",
+    "I need high levels of stimulation to maintain my interest in a task.",
+    "I am generally comfortable in busy noisy environments and can focus without issue.",
+    "I seek novelty and excitement, quickly becoming bored with repetitive tasks.",
+    "I find it difficult to concentrate in open-plan offices, classrooms, or shared spaces."
+  ]},
+  { title:"Self-Awareness & Insight", reversed:[2], qs:[
+    "I am aware that my attention or focus difficulties may be affecting my potential.",
+    "I have wondered whether I might have ADHD or a related attention condition.",
+    "I have never seriously considered that I might have an attention-related condition.",
+    "I believe understanding my attention profile better would benefit my daily life.",
+    "People close to me have suggested I look into ADHD or attention difficulties."
+  ]},
+  { title:"Task Initiation & Follow-Through", reversed:[2], qs:[
+    "Getting started on important tasks feels disproportionately difficult, even when I want to do them.",
+    "I frequently experience task paralysis, unable to begin despite knowing it is urgent.",
+    "I generally have no trouble initiating tasks or projects when needed.",
+    "I have multiple unfinished projects or incomplete goals that I have abandoned.",
+    "Planning and carrying out multi-step tasks often leads to confusion or mistakes."
+  ]},
+  { title:"Anxiety & Worry", reversed:[2], qs:[
+    "I often experience anxiety or worry about having left things undone or forgotten.",
+    "The fear of forgetting something important causes me ongoing stress.",
+    "I rarely worry about forgetting obligations or leaving tasks incomplete.",
+    "I frequently re-check work, messages, or tasks out of fear I made errors.",
+    "Managing my attention difficulties causes me significant emotional distress."
+  ]},
+  { title:"Daily Functioning", reversed:[2], qs:[
+    "Routine daily tasks like paying bills, responding to emails, or cleaning often pile up.",
+    "I feel like I am constantly behind on things despite genuine effort.",
+    "I generally keep on top of my daily responsibilities without significant difficulty.",
+    "I frequently feel overwhelmed by the number of tasks I need to manage.",
+    "My productivity varies dramatically day to day in ways I cannot predict or control."
+  ]},
+  { title:"Self-Esteem & Identity", reversed:[2], qs:[
+    "My attention difficulties have led me to doubt my intelligence or capabilities.",
+    "I have felt shame or embarrassment about being forgetful, disorganised, or distracted.",
+    "I have a strong positive sense of my own abilities and rarely doubt myself.",
+    "I have underachieved relative to my potential due to attention-related difficulties.",
+    "I have held myself back from opportunities due to fear of my attention difficulties being exposed."
+  ]},
+  { title:"Readiness for Support", reversed:[2], qs:[
+    "I would be open to receiving a professional assessment to better understand my attention.",
+    "I believe a formal diagnosis would help me access the right support and strategies.",
+    "I do not believe I need any form of assessment or professional support for my attention.",
+    "I am interested in understanding whether treatment or support could improve my daily life.",
+    "Knowing my ADHD status would positively impact the way I approach my life and work."
+  ]},
+  { title:"Persistence of Symptoms", reversed:[2], qs:[
+    "Looking back, I can identify a consistent pattern of attention difficulties throughout my life.",
+    "My attention-related challenges have persisted across multiple environments and life stages.",
+    "I do not identify with most of the attention difficulties described in this assessment.",
+    "I feel that getting professional clarity on my attention profile is the right next step for me.",
+    "The statements in this assessment have largely resonated with my personal experience."
+  ]},
+  { title:"Additional Screening", reversed:[2], qs:[
+    "I often start new interests or hobbies enthusiastically but abandon them quickly.",
+    "I frequently feel mentally overloaded when managing multiple responsibilities.",
+    "I can maintain consistent routines and habits without much difficulty.",
+    "I find it difficult to stay engaged in tasks that do not immediately interest me.",
+    "My ability to focus and organise tasks significantly affects my work, studies, or relationships."
+  ]}
+];
+
+const OPT_LABELS = ["Strongly Disagree","Disagree","Neutral","Agree","Strongly Agree"];
+const OPT_CLS    = ["opt-sd c-sd","opt-dg c-dg","opt-nt c-nt","opt-ag c-ag","opt-sa c-sa"];
+
+let answers = SECTIONS.map(s => s.qs.map(() => null));
+let currentScreen = 0;
+
+// ── Build all question screens ──
+function buildScreens() {
+  const container = document.getElementById('screens-container');
+  let qGlobal = 1;
+  SECTIONS.forEach((sec, si) => {
+    const div = document.createElement('div');
+    div.id = 'screen-' + si;
+    div.style.display = si === 0 ? 'block' : 'none';
+    let html = `<div class="screen-header">
+      <div class="screen-tag">Section ${si+1} of 20 &nbsp;·&nbsp; ${sec.title}</div>
+      <h2>Choose how accurately each statement reflects you.</h2>
+    </div>
+    <div class="scale-legend">
+      <span><span class="dot-sm c-sd"></span>Strongly Disagree</span>
+      <span><span class="dot-sm c-dg"></span>Disagree</span>
+      <span><span class="dot-sm c-nt"></span>Neutral</span>
+      <span><span class="dot-sm c-ag"></span>Agree</span>
+      <span><span class="dot-sm c-sa"></span>Strongly Agree</span>
+    </div>`;
+    sec.qs.forEach((q, qi) => {
+      html += `<div class="q-card" id="qcard-${si}-${qi}">
+        <div class="q-text"><strong>Q${qGlobal++}.</strong> ${q}</div>
+        <div class="q-options">`;
+      OPT_LABELS.forEach((lbl, oi) => {
+        html += `<div class="q-opt ${OPT_CLS[oi]}" id="opt-${si}-${qi}-${oi}" onclick="selectAnswer(${si},${qi},${oi})">
+          <div class="dot ${OPT_CLS[oi].split(' ')[1]}"></div>${lbl}</div>`;
+      });
+      html += `</div></div>`;
+    });
+    html += `<p class="all-answered-note" id="note-${si}" style="display:none">All questions answered — tap Next to continue.</p>`;
+    div.innerHTML = html;
+    container.appendChild(div);
+  });
+}
+
+function selectAnswer(si, qi, oi) {
+  answers[si][qi] = oi;
+  for (let o = 0; o < 5; o++) document.getElementById(`opt-${si}-${qi}-${o}`)?.classList.remove('selected');
+  document.getElementById(`opt-${si}-${qi}-${oi}`)?.classList.add('selected');
+  checkScreenComplete(si);
+}
+
+function checkScreenComplete(si) {
+  const done = answers[si].every(a => a !== null);
+  document.getElementById('btn-next').disabled = !done;
+  const note = document.getElementById('note-' + si);
+  if (note) note.style.display = done ? 'block' : 'none';
+}
+
+function prevScreen() {
+  if (currentScreen === 0) return;
+  document.getElementById('screen-' + currentScreen).style.display = 'none';
+  currentScreen--;
+  document.getElementById('screen-' + currentScreen).style.display = 'block';
+  updateProgress();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function nextScreen() {
+  if (currentScreen < SECTIONS.length - 1) {
+    document.getElementById('screen-' + currentScreen).style.display = 'none';
+    currentScreen++;
+    document.getElementById('screen-' + currentScreen).style.display = 'block';
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    // Assessment complete — go to payment
+    goToPayment();
+  }
+}
+
+function updateProgress() {
+  const pct = Math.round(((currentScreen + 1) / SECTIONS.length) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = `Screen ${currentScreen + 1} of ${SECTIONS.length}`;
+  document.getElementById('btn-back').disabled = currentScreen === 0;
+  const isLast = currentScreen === SECTIONS.length - 1;
+  const complete = answers[currentScreen].every(a => a !== null);
+  const nb = document.getElementById('btn-next');
+  nb.textContent = isLast ? 'Finish →' : 'Next →';
+  nb.disabled = !complete;
+}
+
+// ── Switch to payment view ──
+function goToPayment() {
+  document.getElementById('view-assessment').classList.remove('active');
+  document.getElementById('progress-bar').style.display = 'none';
+  document.getElementById('view-payment').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Format card input helpers ──
+function formatCard(el) {
+  let v = el.value.replace(/\D/g,'').substring(0,16);
+  el.value = v.replace(/(.{4})/g,'$1 ').trim();
+}
+function formatExpiry(el) {
+  let v = el.value.replace(/\D/g,'').substring(0,4);
+  if (v.length > 2) v = v.substring(0,2) + ' / ' + v.substring(2);
+  el.value = v;
+}
+
+// ── Simulate payment processing ──
+function processPayment() {
+  const email = document.getElementById('pay-email').value.trim();
+  const card  = document.getElementById('pay-card').value.trim();
+  const expiry= document.getElementById('pay-expiry').value.trim();
+  const cvc   = document.getElementById('pay-cvc').value.trim();
+
+  if (!email || !card || !expiry || !cvc) {
+    alert('Please fill in all payment details to continue.');
+    return;
+  }
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Show processing overlay
+  const overlay = document.getElementById('processing-overlay');
+  overlay.classList.add('active');
+
+  // Simulate Stripe processing (2.5s), then reveal results
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    showResults();
+  }, 2500);
+}
+
+// ── Score calculation ──
+function calcScores() {
+  let total = 0;
+  const domainScores = SECTIONS.map((sec, si) => {
+    let ds = 0;
+    sec.qs.forEach((_, qi) => {
+      const raw = answers[si][qi];
+      ds += sec.reversed.includes(qi) ? (4 - raw) : raw;
+    });
+    total += ds;
+    return ds;
+  });
+  return { total, domainScores };
+}
+
+// ── Render results ──
+function showResults() {
+  const { total, domainScores } = calcScores();
+
+  let tier, theme, badge, title, lead;
+  if (total <= 120) {
+    tier='low'; theme='theme-low';
+    badge='✓ &nbsp;Assessment Complete';
+    title='Low Likelihood of ADHD';
+    lead='Your responses suggest that ADHD traits are unlikely to be significantly impacting your daily functioning at this time.';
+  } else if (total <= 240) {
+    tier='moderate'; theme='theme-moderate';
+    badge='⚡ &nbsp;Assessment Complete';
+    title='Moderate ADHD Traits Detected';
+    lead='Your responses indicate several ADHD-related traits that may be affecting your daily functioning. You may benefit from further exploration or a professional assessment.';
+  } else {
+    tier='high'; theme='theme-high';
+    badge='⚠ &nbsp;Assessment Complete';
+    title='High Likelihood of ADHD Traits';
+    lead='Your responses show strong patterns consistent with ADHD across multiple domains. A professional evaluation is strongly recommended.';
+  }
+
+  const rv = document.getElementById('view-results');
+  rv.className = 'view ' + theme;
+
+  document.getElementById('result-badge').innerHTML = badge;
+  document.getElementById('result-score-num').textContent = total;
+  document.getElementById('result-title').textContent = title;
+  document.getElementById('result-lead').textContent = lead;
+
+  // Domain bars
+  document.getElementById('domains-grid').innerHTML = SECTIONS.map((sec, i) => {
+    const pct = Math.round((domainScores[i] / 20) * 100);
+    return `<div class="domain-card">
+      <div class="domain-card__label">${sec.title}</div>
+      <div class="domain-bar-wrap"><div class="domain-bar" style="width:${pct}%"></div></div>
+      <div class="domain-card__score">${domainScores[i]} / 20</div>
+    </div>`;
+  }).join('');
+
+  // Meaning
+  const meanings = {
+    low:["Your answers show few patterns associated with ADHD across the majority of domains.","Attention, organisation, impulse control, and executive functioning appear within a typical range.","Symptoms do not appear to be strongly interfering with daily life based on your responses.","Occasional attention or focus difficulties can relate to stress, sleep, or lifestyle factors rather than ADHD."],
+    moderate:["You show noticeable ADHD-related patterns across several domains including organisation, focus, time management, and emotional regulation.","These traits may be situational, mild, or part of a broader pattern worth exploring further with a professional.","Many people in this range have mild ADHD, executive function challenges, or co-occurring conditions such as anxiety.","A professional assessment would give you a clearer, clinically-informed picture of your attention profile."],
+    high:["Your answers reflect persistent attention difficulties, impulsivity, disorganisation, and executive function impairment across multiple life areas.","These patterns are consistent with what clinicians look for when assessing ADHD in adults.","Many people who score in this range find that understanding their ADHD profile brings significant relief and opens access to effective support.","A formal professional evaluation is the most important next step and the only way to receive an accurate clinical diagnosis."]
+  };
+  document.getElementById('meaning-list').innerHTML = meanings[tier].map(m =>
+    `<li><span class="icon">●</span>${m}</li>`).join('');
+
+  // Steps
+  const steps = {
+    low:[{t:"Review Your Lifestyle",b:"Stress, poor sleep, and anxiety can mimic ADHD symptoms. Consider whether these may be affecting your attention and focus."},{t:"Monitor Over Time",b:"If you notice your symptoms increasing or affecting work and relationships, consider retaking the assessment in a few months."},{t:"Speak With Your GP",b:"If you still have concerns, a conversation with your GP is always worthwhile. Only a clinician can rule out ADHD entirely."}],
+    moderate:[{t:"Consider a Professional Assessment",b:"A licensed assessor can review your full profile, identify patterns, and provide clarity on whether ADHD is contributing to your difficulties."},{t:"Track Your Symptoms",b:"Keep a simple daily log of when attention, focus, or impulsivity difficulties arise. This context is valuable for any clinical conversation."},{t:"Speak With Your GP",b:"Share your assessment result with your GP as a starting point. They can refer you for a formal evaluation or discuss next steps."}],
+    high:[{t:"Book a Professional Assessment",b:"Your result strongly suggests that speaking with a licensed ADHD assessor is the right next step. A formal evaluation will give you clinical clarity."},{t:"Speak With Your GP",b:"Share this result with your GP and request a referral for a formal ADHD evaluation. In the UK, NHS referrals are available through your GP."},{t:"Learn About Treatment Options",b:"ADHD is highly treatable. Options include medication, cognitive behavioural therapy, coaching, and practical strategies that significantly improve daily life."}]
+  };
+  document.getElementById('steps-title').textContent = tier==='high'?'Strongly Recommended Next Steps':tier==='moderate'?'Recommended Next Steps':'Suggested Next Steps';
+  document.getElementById('steps-grid').innerHTML = steps[tier].map((s,i)=>
+    `<div class="step-card"><div class="step-card__num">Step ${i+1}</div><h3>${s.t}</h3><p>${s.b}</p></div>`).join('');
+
+  // Disclaimer
+  const disclaimers = {
+    low:"<strong>Important Notice</strong>This assessment is for informational purposes only and does not constitute a clinical diagnosis. Only a qualified healthcare professional can diagnose ADHD. If you have ongoing concerns about your attention or mental health, please consult a clinician.",
+    moderate:"<strong>Important Notice</strong>This assessment is for informational purposes only and does not constitute a clinical diagnosis. A moderate result suggests traits worth exploring, but only a qualified healthcare professional can diagnose ADHD.",
+    high:"<strong>Important Notice</strong>This assessment is for informational purposes only and does not constitute a clinical diagnosis. A high result suggests strong ADHD-related patterns, but only a qualified healthcare professional can formally diagnose ADHD. Please do not use this result alone to make medical decisions."
+  };
+  document.getElementById('disclaimer-text').innerHTML = disclaimers[tier];
+
+  // Upsell heading
+  const upsellHeadings = {
+    low:"Want a Second Opinion?",
+    moderate:"Ready to Get Professional Clarity?",
+    high:"Your Next Step is a Professional Assessment"
+  };
+  const upsellBodies = {
+    low:"Even with a low score, speaking with a licensed assessor can help you understand your attention profile more fully and rule out any underlying conditions.",
+    moderate:"Your results suggest it is worth speaking with a professional. Our licensed assessors can review your full profile and help you understand what your results mean clinically.",
+    high:"Based on your results, a professional assessment is strongly recommended. Our licensed assessors can guide you through your options and next steps."
+  };
+  document.getElementById('upsell-title').textContent = upsellHeadings[tier];
+  document.getElementById('upsell-body').textContent = upsellBodies[tier];
+
+  // Switch views
+  document.getElementById('view-payment').classList.remove('active');
+  rv.classList.add('active');
+  document.getElementById('site-footer').classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Init ──
+buildScreens();
+updateProgress();
+</script>
+</body>
+</html>

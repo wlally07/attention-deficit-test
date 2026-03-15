@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is ADHD? | Attention-Deficit/Hyperactivity Disorder Explained | AttentionDeficitTest.com</title>
+  <meta name="description" content="What is ADHD? A complete guide to Attention-Deficit/Hyperactivity Disorder — causes, symptoms, types, diagnosis and treatment for adults, teens and children." />
+  <link rel="canonical" href="https://attentiondeficittest.com/adhd" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"What is ADHD?","url":"https://attentiondeficittest.com/adhd","description":"A complete guide to Attention-Deficit/Hyperactivity Disorder — causes, symptoms, types, diagnosis and treatment.","about":{"@type":"MedicalCondition","name":"Attention-Deficit/Hyperactivity Disorder (ADHD)","alternateName":"ADD"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,300;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark:#12100e;--dark-2:#1c1a17;--dark-3:#252219;
+      --ink:#1e1c19;--ink-soft:#5c5850;--ink-muted:#9a9288;
+      --cream:#faf8f4;--cream-2:#f2ede6;--white:#ffffff;
+      --amber:#e8a020;--amber-lt:#f5c060;--amber-glow:rgba(232,160,32,.15);
+      --border:rgba(30,28,25,.1);
+      --r:16px;--r-lg:24px;
+      --serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',sans-serif;
+      --sh-sm:0 2px 12px rgba(0,0,0,.06);--sh-md:0 8px 32px rgba(0,0,0,.1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:var(--serif);line-height:1.15}
+    h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:700;letter-spacing:-.02em}
+    h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;letter-spacing:-.015em}
+    h3{font-size:1.25rem;font-weight:600}
+    h4{font-size:1.05rem;font-weight:600}
+    p{color:var(--ink-soft);font-size:.96rem;line-height:1.8}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 24px}
+    .container--narrow{max-width:800px;margin:0 auto;padding:0 24px}
+    .section{padding:100px 0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:700;cursor:pointer;border:none;border-radius:100px;transition:transform .22s,box-shadow .22s,background .22s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-amber{background:var(--amber);color:var(--dark);padding:15px 32px;font-size:.96rem;box-shadow:0 6px 28px rgba(232,160,32,.38)}
+    .btn-amber:hover{background:var(--amber-lt);box-shadow:0 12px 40px rgba(232,160,32,.5)}
+    .btn-ghost-dark{background:transparent;color:rgba(255,255,255,.75);border:1.5px solid rgba(255,255,255,.22);padding:14px 28px;font-size:.93rem;border-radius:100px}
+    .btn-ghost-dark:hover{background:rgba(255,255,255,.07);color:#fff}
+    .pill{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;padding:7px 16px;border-radius:100px}
+    .pill-amber{background:var(--amber-glow);color:var(--amber);border:1px solid rgba(232,160,32,.25)}
+    .pill-dark{background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.12)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:16px 0;transition:background .4s,box-shadow .4s}
+    .nav.solid{background:rgba(18,16,14,.96);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between}
+    .nav__logo{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff;display:flex;align-items:center;gap:10px}
+    .nav__logo-ic{width:32px;height:32px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .nav__links{display:flex;gap:28px;list-style:none}
+    .nav__links a{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.55);transition:color .2s}
+    .nav__links a:hover,.nav__links a.active{color:#fff}
+    @media(max-width:768px){.nav__links{display:none}}
+
+    /* PAGE HERO */
+    .page-hero{background:var(--dark);padding:160px 0 100px;position:relative;overflow:hidden}
+    .page-hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(232,160,32,.08) 0%,transparent 70%);top:-200px;right:-150px;z-index:0;pointer-events:none}
+    .page-hero__inner{position:relative;z-index:1;max-width:680px}
+    .page-hero h1{color:#fff;margin-bottom:20px;animation:fadeUp .45s ease both}
+    .page-hero h1 em{font-style:italic;color:var(--amber)}
+    .page-hero p{color:rgba(255,255,255,.5);font-size:1.05rem;margin-bottom:36px;line-height:1.75;animation:fadeUp .5s .1s ease both}
+    .page-hero__btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .5s .2s ease both}
+
+    /* BREADCRUMB */
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:.78rem;color:rgba(255,255,255,.3);margin-bottom:24px;animation:fadeUp .4s ease both}
+    .breadcrumb a{color:rgba(255,255,255,.4);transition:color .15s}
+    .breadcrumb a:hover{color:rgba(255,255,255,.8)}
+    .breadcrumb span{color:rgba(255,255,255,.2)}
+
+    /* JUMP LINKS */
+    .jump-bar{background:var(--dark-3);border-bottom:1px solid rgba(255,255,255,.06);padding:0}
+    .jump-bar__inner{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+    .jump-bar__inner::-webkit-scrollbar{display:none}
+    .jump-link{padding:16px 22px;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.4);white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+    .jump-link:hover{color:#fff;border-bottom-color:var(--amber)}
+
+    /* EYEBROW */
+    .eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:10px;display:block}
+
+    /* SECTION HEADERS */
+    .section-hd{text-align:center;max-width:600px;margin:0 auto 56px}
+    .section-hd h2{margin-bottom:14px}
+    .section-hd h2 em,.section-hd em{font-style:italic;color:var(--amber)}
+    .section-hd p{font-size:.97rem}
+
+    /* PROSE */
+    .prose h3{margin-bottom:12px;margin-top:32px;color:var(--ink)}
+    .prose h3:first-child{margin-top:0}
+    .prose p{margin-bottom:14px}
+    .prose p:last-child{margin-bottom:0}
+
+    /* TWO COL */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+    @media(max-width:860px){.two-col{grid-template-columns:1fr;gap:40px}}
+
+    /* GRID */
+    .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media(max-width:700px){.grid2{grid-template-columns:1fr}}
+
+    /* CARDS */
+    .scard{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;box-shadow:var(--sh-sm);transition:transform .3s,box-shadow .3s}
+    .scard:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+    .scard__ico{font-size:1.8rem;margin-bottom:14px}
+    .scard h3{margin-bottom:8px;font-size:1.05rem}
+    .scard p{font-size:.88rem;line-height:1.7}
+
+    /* TYPE CARDS */
+    .type-card{border-radius:var(--r-lg);padding:32px;position:relative;overflow:hidden}
+    .type-card--1{background:var(--dark);border:1px solid rgba(255,255,255,.08)}
+    .type-card--2{background:#1a1040;border:1px solid rgba(120,80,255,.15)}
+    .type-card--3{background:#0d2a1a;border:1px solid rgba(34,197,94,.12)}
+    .type-card h3{color:#fff;margin-bottom:10px;font-size:1.1rem}
+    .type-card p{color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.7}
+    .type-card__tag{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+    .type-card--1 .type-card__tag{background:rgba(232,160,32,.15);color:var(--amber);border:1px solid rgba(232,160,32,.2)}
+    .type-card--2 .type-card__tag{background:rgba(120,80,255,.15);color:#a78bfa;border:1px solid rgba(120,80,255,.2)}
+    .type-card--3 .type-card__tag{background:rgba(34,197,94,.12);color:#4ade80;border:1px solid rgba(34,197,94,.15)}
+    .type-card ul{list-style:none;margin-top:16px;border-top:1px solid rgba(255,255,255,.07);padding-top:14px;display:flex;flex-direction:column;gap:9px}
+    .type-card li{font-size:.85rem;color:rgba(255,255,255,.45);display:flex;gap:8px;align-items:flex-start}
+    .type-card li::before{content:"→";color:rgba(255,255,255,.2);flex-shrink:0}
+
+    /* KEY POINTS */
+    .kp{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .kpi{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--ink-soft)}
+    .tick{width:19px;height:19px;flex-shrink:0;margin-top:2px}
+
+    /* STAT STRIP */
+    .stat-strip{background:var(--dark);padding:60px 0}
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    @media(max-width:700px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+    .stat-item{padding:32px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+    .stat-item:last-child{border:none}
+    @media(max-width:700px){.stat-item:nth-child(2){border-right:none}.stat-item:nth-child(3){border-right:none}}
+    .stat-item strong{display:block;font-family:var(--serif);font-size:2.2rem;font-weight:700;color:#fff;margin-bottom:6px}
+    .stat-item strong em{font-style:italic;color:var(--amber)}
+    .stat-item span{font-size:.8rem;color:rgba(255,255,255,.35)}
+
+    /* INTERNAL LINKS */
+    .page-links{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:600px){.page-links{grid-template-columns:1fr}}
+    .page-link-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--sh-sm);transition:transform .25s,box-shadow .25s,border-color .25s}
+    .page-link-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:var(--amber)}
+    .page-link-card__text span{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:6px}
+    .page-link-card__text h3{font-size:1.1rem;margin-bottom:5px;color:var(--ink)}
+    .page-link-card__text p{font-size:.84rem;line-height:1.6;margin:0}
+    .page-link-card__arrow{width:40px;height:40px;background:var(--amber-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:1.1rem;flex-shrink:0;transition:background .2s}
+    .page-link-card:hover .page-link-card__arrow{background:var(--amber);color:var(--dark)}
+
+    /* FAQ */
+    .flist{display:flex;flex-direction:column;gap:10px}
+    .fi{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm)}
+    .fi summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 24px;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink);user-select:none;transition:background .15s;font-family:var(--sans)}
+    .fi summary::-webkit-details-marker{display:none}
+    .fi summary:hover,.fi[open] summary{background:var(--cream-2)}
+    .fi[open] summary{border-bottom:1px solid var(--border)}
+    .tog{width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--cream-2);color:var(--ink);font-size:1.3rem;font-weight:300;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .25s,color .2s}
+    .fi[open] .tog{background:var(--amber);color:var(--dark);transform:rotate(45deg)}
+    .fb{padding:16px 24px 22px;font-size:.92rem;line-height:1.8;color:var(--ink-soft)}
+    .fb p+p{margin-top:10px}
+
+    /* CTA */
+    .cta-block{background:var(--dark);border-radius:var(--r-lg);padding:60px 48px;text-align:center}
+    .cta-block h2{color:#fff;margin-bottom:14px}
+    .cta-block h2 em{font-style:italic;color:var(--amber)}
+    .cta-block p{color:rgba(255,255,255,.45);max-width:480px;margin:0 auto 32px;font-size:.97rem;line-height:1.7}
+    @media(max-width:600px){.cta-block{padding:40px 24px}}
+
+    /* FOOTER */
+    footer{background:var(--dark-2);padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.06)}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .foot-brand{font-family:var(--serif);font-weight:700;font-size:1rem;color:#fff;margin-bottom:10px}
+    .foot-brand span{color:var(--amber)}
+    .foot-tagline{font-size:.8rem;color:rgba(255,255,255,.3);line-height:1.6}
+    .foot-col h4{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:14px}
+    .foot-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.4);margin-bottom:8px;transition:color .15s}
+    .foot-col a:hover{color:#fff}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;font-size:.75rem;color:rgba(255,255,255,.2);line-height:1.6}
+    @media(max-width:768px){.foot-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="https://attentiondeficittest.com/" class="nav__logo" aria-label="AttentionDeficitTest home">
+        <div class="nav__logo-ic">🧠</div>
+        AttentionDeficitTest<span style="color:var(--amber)">.com</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></li>
+        <li><a href="https://attentiondeficittest.com/adhd" class="active">About ADHD</a></li>
+        <li><a href="https://attentiondeficittest.com/#pricing">Pricing</a></li>
+        <li><a href="https://attentiondeficittest.com/faqs">FAQ</a></li>
+      </ul>
+      <a href="https://attentiondeficittest.com/assessment" class="btn btn-amber" style="padding:11px 24px;font-size:.88rem">Start Assessment</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="container">
+    <div class="page-hero__inner">
+      <div class="breadcrumb">
+        <a href="https://attentiondeficittest.com/">Home</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,.6)">About ADHD</span>
+      </div>
+      <h1>What is <em>ADHD</em>?</h1>
+      <p>Attention-Deficit/Hyperactivity Disorder is one of the most common neurodevelopmental conditions in the world, yet it remains widely misunderstood. This guide explains what ADHD is, how it affects people across all ages, and what can be done about it.</p>
+      <div class="page-hero__btns">
+        <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Take the Assessment</a>
+        <a href="#types" class="btn btn-ghost-dark">Explore ADHD Types</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JUMP LINKS -->
+<nav class="jump-bar" aria-label="Page sections">
+  <div class="container">
+    <div class="jump-bar__inner">
+      <a href="#what-is-adhd" class="jump-link">What is ADHD?</a>
+      <a href="#types" class="jump-link">Types of ADHD</a>
+      <a href="#symptoms" class="jump-link">Symptoms</a>
+      <a href="#coexisting" class="jump-link">Related Conditions</a>
+      <a href="#causes" class="jump-link">Causes</a>
+      <a href="#diagnosis" class="jump-link">Diagnosis</a>
+      <a href="#treatment" class="jump-link">Treatment</a>
+      <a href="#outlook" class="jump-link">Outlook</a>
+      <a href="#faq" class="jump-link">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- WHAT IS ADHD -->
+<section class="section" id="what-is-adhd">
+  <div class="container">
+    <div class="two-col">
+      <div class="prose">
+        <span class="eyebrow">The Basics</span>
+        <h2 style="margin-bottom:20px">Understanding <em>ADHD</em></h2>
+        <h3>A Neurodevelopmental Condition</h3>
+        <p>Attention-deficit/hyperactivity disorder, usually shortened to ADHD, is a neurodevelopmental condition that affects how the brain regulates attention, activity, impulse control and self-management. It is not simply a matter of being "easily distracted" or "full of energy". For a diagnosis to be made, symptoms must be persistent, present in more than one setting, and significant enough to interfere with day-to-day functioning. Major diagnostic systems, including DSM-5-TR and ICD-11, recognise ADHD as a condition that can affect children, young people and adults.</p>
+        <h3>More Than Distraction</h3>
+        <p>At its core, ADHD is usually described through three broad groups of symptoms: inattention, hyperactivity and impulsivity. Inattention can include difficulty sustaining focus, losing track of tasks, forgetfulness and disorganisation. Hyperactivity may be obvious in children who fidget, move constantly or struggle to stay seated, but in teenagers and adults it often becomes less outwardly visible and is more likely to feel like inner restlessness. Impulsivity can show up as blurting things out, interrupting, impatience or acting without fully thinking through the consequences.</p>
+        <h3>Not Confined to Childhood</h3>
+        <p>ADHD is not rare, and it is not confined to childhood. The National Institute of Mental Health describes it as one of the most common developmental disorders of childhood, while the NHS and NICE both make clear that symptoms often continue into adolescence and adulthood. Some people are identified early because school demands expose difficulties with attention and behaviour. Others are not diagnosed until much later, often when work, relationships, parenting or independent living place greater pressure on executive skills such as planning, organisation and emotional regulation.</p>
+        <h3>Executive Functioning: the Core Challenge</h3>
+        <p>One of the most helpful ways to understand ADHD is through the idea of executive functioning. Executive functions are the mental processes that help us organise ourselves, start tasks, hold information in mind, shift attention appropriately, manage time, and regulate our responses. Research reviews continue to support the view that executive dysfunction is a central feature of ADHD, although not every person will show the same pattern of strengths and difficulties. That is one reason ADHD can look quite different from one person to another.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Key Facts</span>
+        <h2 style="margin-bottom:24px">ADHD at a <em>Glance</em></h2>
+        <div class="scard" style="margin-bottom:16px">
+          <ul class="kp">
+            <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Recognised by DSM-5-TR, ICD-11, NICE, NHS and WHO</li>
+            <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Affects children, teenagers and adults worldwide</li>
+            <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Three presentations: inattentive, hyperactive-impulsive, combined</li>
+            <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Strong genetic and neurological basis</li>
+            <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Cannot be diagnosed by blood test or brain scan</li>
+            <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Symptoms must impair functioning in more than one setting</li>
+            <li class="kpi"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Highly manageable with the right treatment and support</li>
+          </ul>
+        </div>
+        <div class="scard">
+          <span class="eyebrow" style="margin-bottom:6px">Is This You?</span>
+          <h4 style="margin-bottom:8px;font-size:1rem">Find out in 5 minutes</h4>
+          <p style="font-size:.88rem;margin-bottom:16px">Our clinically-informed assessment is based on DSM-5 and WHO ASRS criteria. Instant results, no GP referral needed.</p>
+          <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber" style="width:100%;justify-content:center">Start the Assessment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stat-strip">
+  <div class="container">
+    <div class="stat-grid">
+      <div class="stat-item"><strong>5<em>–</em>7%</strong><span>of children worldwide have ADHD</span></div>
+      <div class="stat-item"><strong>2<em>–</em>5%</strong><span>of adults are affected globally</span></div>
+      <div class="stat-item"><strong>3<em>×</em></strong><span>more likely to be diagnosed in boys than girls</span></div>
+      <div class="stat-item"><strong>50<em>%+</em></strong><span>of childhood cases continue into adulthood</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW ADHD PRESENTS -->
+<section class="section" style="background:var(--cream-2)" id="types">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">DSM-5-TR and ICD-11 Classifications</span>
+      <h2>How ADHD <em>Presents</em></h2>
+      <p>Current diagnostic frameworks describe three main presentations of ADHD. The balance of symptoms can change over time, which is why a person's presentation in adulthood may not look the same as it did in childhood.</p>
+    </div>
+    <div class="grid3" style="margin-bottom:64px">
+      <div class="type-card type-card--1">
+        <span class="type-card__tag">Type 1</span>
+        <h3>Predominantly Inattentive</h3>
+        <p>Formerly referred to as ADD. A person may seem forgetful, distracted, disorganised or mentally elsewhere. This is the most commonly missed presentation, particularly in girls and adults, because the outward signs are quieter.</p>
+        <ul>
+          <li>Easily distracted, mind frequently wanders</li>
+          <li>Forgets appointments, tasks and daily items</li>
+          <li>Avoids tasks requiring sustained mental effort</li>
+          <li>Appears not to listen when spoken to directly</li>
+        </ul>
+      </div>
+      <div class="type-card type-card--2">
+        <span class="type-card__tag">Type 2</span>
+        <h3>Predominantly Hyperactive-Impulsive</h3>
+        <p>A person may appear restless, excessively talkative, impatient or prone to acting first and thinking later. In children this is often visible as physical movement. In adults and teenagers it typically becomes internal.</p>
+        <ul>
+          <li>Fidgets, taps, cannot stay seated comfortably</li>
+          <li>Talks excessively, blurts things out</li>
+          <li>Acts without considering consequences</li>
+          <li>Difficulty waiting, easily impatient</li>
+        </ul>
+      </div>
+      <div class="type-card type-card--3">
+        <span class="type-card__tag">Type 3</span>
+        <h3>Combined Presentation</h3>
+        <p>Both groups of symptoms are clearly present and affect daily functioning. This is the most common overall diagnosis. Symptoms appear across multiple settings including home, school or the workplace.</p>
+        <ul>
+          <li>Significant inattention and distractibility</li>
+          <li>Impulsive behaviour and physical or inner restlessness</li>
+          <li>Affects work, relationships and self-management</li>
+          <li>Consistent across settings, not situational</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ADHD ACROSS THE LIFESPAN -->
+    <div class="section-hd" style="margin-top:20px">
+      <span class="eyebrow">Across the Lifespan</span>
+      <h2>ADHD in Children, Teens <em>&amp; Adults</em></h2>
+      <p>ADHD can look very different depending on age. The same underlying condition manifests differently as life demands change.</p>
+    </div>
+    <div class="grid3">
+      <div class="scard">
+        <div class="scard__ico">🧒</div>
+        <h3>In Children</h3>
+        <p>ADHD often becomes noticeable when expectations around sitting still, following instructions and staying on task increase. A child may seem constantly on the move, forgetful, impulsive or unable to finish work even when bright and capable. The NHS notes that symptoms usually begin before age 12, although they are not always recognised at that point. Difficulties at school are common, but ADHD also affects family life, friendships and self-esteem.</p>
+      </div>
+      <div class="scard">
+        <div class="scard__ico">🎒</div>
+        <h3>In Teenagers</h3>
+        <p>The outward signs of hyperactivity may lessen, but adolescence brings its own demands. Secondary school requires independent organisation, juggling subjects, meeting deadlines and managing social pressures. A young person with ADHD may look unmotivated or inconsistent when the real difficulty lies in planning, sustaining effort and regulating emotions under pressure. Emotional dysregulation is widely recognised in clinical research as a common and impairing feature for many teenagers with ADHD.</p>
+      </div>
+      <div class="scard">
+        <div class="scard__ico">💼</div>
+        <h3>In Adults</h3>
+        <p>ADHD in adults looks very different from stereotypes. Many adults describe chronic procrastination, poor time management, difficulty prioritising, losing important items, unfinished projects, forgetfulness, interrupting others, impatience and a sense of constant mental overactivity. NHS guidance for adults specifically highlights that ADHD can affect work, home life and relationships. Many adults are only diagnosed after their child receives a diagnosis and they recognise similar patterns in themselves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYMPTOMS -->
+<section class="section" id="symptoms">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">Recognising ADHD</span>
+      <h2>Common <em>Symptoms</em> of ADHD</h2>
+      <p>ADHD symptoms vary considerably between individuals and change throughout the lifespan. Because other conditions such as anxiety, depression and sleep disorders can produce similar patterns, a professional assessment is essential for accurate diagnosis.</p>
+    </div>
+    <div class="grid3" style="margin-bottom:56px">
+      <div class="scard"><div class="scard__ico">🎯</div><h3>Inattention</h3><p>Difficulty sustaining focus on tasks, frequently losing concentration mid-way through work or conversations. This includes forgetting appointments, losing items, and struggling to follow through on instructions. Often described as a mind that constantly seeks new stimulation.</p></div>
+      <div class="scard"><div class="scard__ico">⚡</div><h3>Hyperactivity</h3><p>Excessive movement in children, often shifting to internal restlessness in adults and teenagers. A persistent feeling of being driven, racing thoughts, and difficulty relaxing or switching off even in calm environments.</p></div>
+      <div class="scard"><div class="scard__ico">💬</div><h3>Impulsivity</h3><p>Acting or speaking before thinking through the consequences. Interrupting conversations, blurting out comments, making fast decisions that carry risk, or reacting emotionally and intensely before fully processing a situation.</p></div>
+      <div class="scard"><div class="scard__ico">🗂️</div><h3>Disorganisation</h3><p>Persistent struggles with keeping things in order, managing schedules, and completing multi-step tasks. Frequently losing items, forgetting responsibilities, and finding it hard to prioritise when multiple demands compete for attention.</p></div>
+      <div class="scard"><div class="scard__ico">⏰</div><h3>Time Blindness</h3><p>A poor internal sense of time passing, leading to chronic lateness, missed deadlines and difficulty planning ahead. Often one of the most disruptive symptoms in adult life, affecting work performance and daily reliability.</p></div>
+      <div class="scard"><div class="scard__ico">🌊</div><h3>Emotional Dysregulation</h3><p>Intense emotional reactions that can feel difficult to control. Frustration, rejection sensitivity and rapid mood shifts are widely recognised in clinical discussion and research as common and impairing features of ADHD, particularly in teenagers and adults.</p></div>
+    </div>
+
+    <!-- DAILY IMPACT PROSE -->
+    <div class="two-col">
+      <div class="prose">
+        <span class="eyebrow">Real-World Impact</span>
+        <h2 style="margin-bottom:20px">More Than <em>Distraction</em></h2>
+        <h3>At School and University</h3>
+        <p>ADHD can affect almost every part of life. At school or university, it may lead to careless mistakes, inconsistent performance, difficulty completing coursework, or revision problems despite good understanding of the material. A student with ADHD may be perceived as bright but underachieving, when the real barrier is executive function rather than ability.</p>
+        <h3>At Work</h3>
+        <p>In the workplace, ADHD may affect punctuality, organisation, meeting deadlines, email management or the ability to switch effectively between tasks. Many adults describe spending enormous amounts of mental energy just getting through ordinary responsibilities that others manage automatically.</p>
+        <h3>In Relationships and Family Life</h3>
+        <p>In family life and relationships, ADHD can contribute to misunderstandings, forgotten commitments, emotional reactivity or difficulty listening and staying present in conversations. NICE's guideline is built around the principle that ADHD is clinically important precisely because it causes real-world impairment, not just a collection of traits.</p>
+        <h3>The Emotional Toll</h3>
+        <p>It is also important to understand that ADHD can coexist with significant emotional strain. People with ADHD are at higher risk of frustration, shame, low self-confidence and stress, especially if their difficulties have long been misread as laziness, carelessness or lack of effort. Long periods of being criticised, misunderstood or underperforming relative to one's ability can leave a substantial mark. This is one reason why many adults say that receiving a proper assessment is not simply about obtaining a label, but about making sense of a lifetime of patterns.</p>
+      </div>
+      <div class="prose">
+        <span class="eyebrow">A Different Side</span>
+        <h2 style="margin-bottom:20px">ADHD <em>Strengths</em></h2>
+        <h3>Not Only Deficits</h3>
+        <p>At the same time, ADHD is not only a list of deficits. Many people with ADHD describe strengths such as creativity, enthusiasm, curiosity, spontaneity, high energy and the ability to think laterally. These qualities, when understood and channelled, can become significant advantages in the right environments.</p>
+        <h3>Hyperfocus</h3>
+        <p>Some people with ADHD also experience periods of intense concentration on highly engaging tasks. This experience is often described informally as hyperfocus. It is not a formal diagnostic criterion, but research suggests that intense, narrow focus on particularly rewarding or interesting activities is commonly reported by people with ADHD, and may relate to the same differences in attention regulation that make other tasks difficult to sustain.</p>
+        <h3>Resilience and Problem Solving</h3>
+        <p>Having navigated a world that often feels misaligned with how they think, many people with ADHD develop remarkable resilience and adaptability. Non-linear thinking and a tendency to notice what others miss means that many people with ADHD excel at identifying novel solutions and approaching problems from unexpected angles.</p>
+        <div class="scard" style="margin-top:24px;background:var(--amber-glow);border-color:rgba(232,160,32,.2)">
+          <p style="font-size:.9rem;font-style:italic;color:var(--ink);line-height:1.8">"The most useful modern understanding of ADHD is not that people with ADHD cannot pay attention, but that they have difficulty <strong>regulating</strong> attention, effort, impulse control and self-management consistently across situations."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAUSES -->
+<section class="section" style="background:var(--cream-2)" id="causes">
+  <div class="container">
+    <div class="two-col">
+      <div class="prose">
+        <span class="eyebrow">Why ADHD Happens</span>
+        <h2 style="margin-bottom:20px">What <em>Causes</em> ADHD?</h2>
+        <h3>A Strong Genetic Foundation</h3>
+        <p>The exact cause of ADHD in any one person is not usually identifiable, but the overall evidence strongly supports a major genetic contribution. NICE, NIMH and major research reviews all describe ADHD as a neurodevelopmental condition with a strong hereditary component. Rather than being caused by a single gene, ADHD appears to be influenced by many genetic variants, each contributing a small amount to overall likelihood. This helps explain why ADHD often runs in families without following a simple inheritance pattern.</p>
+        <h3>Brain Structure and Chemistry</h3>
+        <p>NIMH and research reviews describe differences in the systems that use dopamine and noradrenaline, chemicals that help regulate motivation, attention, reward processing and executive control. Brain imaging findings are not precise enough to diagnose ADHD in an individual, but at group level they have shown meaningful differences in the functioning and development of networks linked to executive control and self-regulation.</p>
+        <h3>Environmental Contributing Factors</h3>
+        <p>Environmental influences matter too, particularly very early in life. Research and clinical guidance point to factors such as premature birth, low birth weight, prenatal exposure to alcohol or tobacco, certain toxins, and in some cases brain injury, as possible contributors to risk. These are contributing factors rather than direct causes.</p>
+        <h3>What Does Not Cause ADHD</h3>
+        <p>Popular ideas such as "bad parenting", too much television, or sugar as a primary cause are not supported as explanations for ADHD. These factors may affect behaviour, but they do not create the neurological differences associated with the condition. ADHD has strong genetic and biological roots.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Clearing Up Common Myths</span>
+        <h2 style="margin-bottom:24px">ADHD <em>Myths</em> Debunked</h2>
+        <div class="flist">
+          <details class="fi"><summary>ADHD is not a real condition <span class="tog">+</span></summary><div class="fb"><p>ADHD is a well-established neurodevelopmental condition recognised by the World Health Organization, DSM-5-TR, ICD-11, NICE and NHS. Decades of peer-reviewed research have identified consistent neurological, genetic and behavioural characteristics. It is as real as any other medical condition.</p></div></details>
+          <details class="fi"><summary>Only children have ADHD <span class="tog">+</span></summary><div class="fb"><p>ADHD does not disappear at adulthood. Research suggests that more than 50 percent of children with ADHD continue to experience significant symptoms as adults. Many people are only diagnosed later in life after years of struggling without understanding why.</p></div></details>
+          <details class="fi"><summary>ADHD only affects boys <span class="tog">+</span></summary><div class="fb"><p>While ADHD is diagnosed more frequently in boys, this largely reflects differences in how symptoms present. Girls and women more commonly show the inattentive presentation, which is less disruptive and therefore more easily missed. This leads to significant under-diagnosis in females.</p></div></details>
+          <details class="fi"><summary>People with ADHD just need more discipline <span class="tog">+</span></summary><div class="fb"><p>ADHD is not the result of laziness, lack of effort or poor willpower. The brain of someone with ADHD genuinely processes attention and impulse control differently. Telling someone with ADHD to simply try harder is like telling someone with poor eyesight to look harder.</p></div></details>
+          <details class="fi"><summary>Sugar and screen time cause ADHD <span class="tog">+</span></summary><div class="fb"><p>Research does not support the idea that sugar or screen time causes ADHD. These factors can affect the behaviour and mood of any child or adult, but they do not create the neurological differences associated with ADHD.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADHD AND OTHER CONDITIONS -->
+<section class="section" id="coexisting">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">The Full Clinical Picture</span>
+      <h2>ADHD and <em>Related Conditions</em></h2>
+      <p>ADHD frequently occurs alongside other conditions rather than in isolation. NICE notes that assessment should always consider the possibility of coexisting disorders. This overlap can make diagnosis more complex, as symptoms may look similar on the surface while requiring different treatment approaches.</p>
+    </div>
+    <div class="grid3" style="margin-bottom:48px">
+      <div class="scard"><div class="scard__ico">😰</div><h3>Anxiety and Depression</h3><p>Research consistently shows elevated rates of anxiety disorders and depression among people with ADHD. These conditions can overlap and reinforce one another. Anxiety, depression and PTSD can all affect concentration, energy and emotional control, making careful differential diagnosis essential.</p></div>
+      <div class="scard"><div class="scard__ico">🌙</div><h3>Sleep Problems</h3><p>Sleep issues are both commonly affected by ADHD and clinically important. Problems can include difficulty settling to sleep, delayed sleep phase, restless sleep and daytime tiredness. NICE recommends clinicians take sleep into account during assessment, as sleep disturbance can worsen attention and emotional regulation significantly.</p></div>
+      <div class="scard"><div class="scard__ico">🧩</div><h3>Autism Spectrum Disorder</h3><p>ADHD and autism spectrum disorder (ASD) frequently co-occur. Both conditions can affect social functioning, communication and sensory processing, and the overlap can make accurate diagnosis more challenging. Clinicians experienced in both conditions are important for a thorough assessment.</p></div>
+      <div class="scard"><div class="scard__ico">📖</div><h3>Learning Difficulties</h3><p>Dyslexia, dyscalculia and other learning difficulties are more common in people with ADHD than in the general population. ADHD itself does not affect raw intelligence, but these coexisting conditions can significantly compound academic difficulties.</p></div>
+      <div class="scard"><div class="scard__ico">🔄</div><h3>Emotional Dysregulation</h3><p>Emotional dysregulation is not always listed as a formal diagnostic criterion, but it is widely recognised in clinical discussion and research as a common and impairing feature for many people with ADHD, particularly rejection sensitive dysphoria (RSD).</p></div>
+      <div class="scard"><div class="scard__ico">🩺</div><h3>Other Mental Health Conditions</h3><p>Bipolar disorder, substance use disorders and personality difficulties can co-occur with ADHD. A thorough assessment explores when symptoms started, how stable they have been over time, whether they occur across settings, and whether another condition better explains them.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSIS -->
+<section class="section" style="background:var(--cream-2)" id="diagnosis">
+  <div class="container">
+    <div class="two-col">
+      <div class="prose">
+        <span class="eyebrow">Getting a Diagnosis</span>
+        <h2 style="margin-bottom:20px">How is ADHD <em>Diagnosed</em>?</h2>
+        <h3>No Single Test</h3>
+        <p>There is no blood test, urine test, brain scan or EEG that can currently diagnose ADHD reliably in routine clinical practice. NICE guidance is explicit that diagnosis should be made by a suitably qualified specialist based on a comprehensive clinical assessment. Rating scales and questionnaires can be helpful, but they are not enough on their own.</p>
+        <h3>What a Thorough Assessment Includes</h3>
+        <p>A thorough ADHD assessment usually includes a detailed conversation about current symptoms and functioning, as well as childhood history, education, work, relationships, physical health, mental health and family history. When appropriate, clinicians may gather information from school reports, parents, partners or others who know the person well.</p>
+        <h3>Diagnostic Thresholds</h3>
+        <p>DSM-5-TR requires at least six symptoms from the inattentive list and/or six from the hyperactive-impulsive list for children, and at least five for people aged 17 and over. Symptoms must have been present for at least six months, be developmentally inappropriate, occur in at least two settings, and interfere with functioning. WHO's ICD-11 similarly recognises inattentive, hyperactive-impulsive and combined presentations.</p>
+        <h3>Childhood History is Essential</h3>
+        <p>ADHD requires symptoms to be present in more than one setting and to have begun in childhood, even if the person was not diagnosed then. This is especially important for adults seeking diagnosis, as retrospective evidence of early symptoms is a core part of the assessment.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Assessment Steps</span>
+        <h2 style="margin-bottom:24px">What to <em>Expect</em></h2>
+        <div class="grid3" style="grid-template-columns:1fr;gap:14px">
+          <div class="scard" style="padding:22px 24px"><div style="display:flex;gap:14px;align-items:flex-start"><div style="width:34px;height:34px;background:var(--amber);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:var(--sans)">1</div><div><h3 style="margin-bottom:5px;font-size:.98rem">Clinical Interview</h3><p style="font-size:.86rem">Detailed discussion of current symptoms, daily challenges, work, relationships and life history.</p></div></div></div>
+          <div class="scard" style="padding:22px 24px"><div style="display:flex;gap:14px;align-items:flex-start"><div style="width:34px;height:34px;background:var(--amber);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:var(--sans)">2</div><div><h3 style="margin-bottom:5px;font-size:.98rem">Standardised Questionnaires</h3><p style="font-size:.86rem">Rating scales such as the WHO ASRS v1.1 used to measure frequency and severity of ADHD symptoms.</p></div></div></div>
+          <div class="scard" style="padding:22px 24px"><div style="display:flex;gap:14px;align-items:flex-start"><div style="width:34px;height:34px;background:var(--amber);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:var(--sans)">3</div><div><h3 style="margin-bottom:5px;font-size:.98rem">Childhood History Review</h3><p style="font-size:.86rem">Exploration of early educational experiences, school reports and childhood behaviour patterns.</p></div></div></div>
+          <div class="scard" style="padding:22px 24px"><div style="display:flex;gap:14px;align-items:flex-start"><div style="width:34px;height:34px;background:var(--amber);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:var(--sans)">4</div><div><h3 style="margin-bottom:5px;font-size:.98rem">Differential Diagnosis</h3><p style="font-size:.86rem">Careful ruling out of anxiety, depression, sleep disorders and other conditions that produce similar symptoms.</p></div></div></div>
+          <div class="scard" style="padding:22px 24px"><div style="display:flex;gap:14px;align-items:flex-start"><div style="width:34px;height:34px;background:var(--amber);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:var(--sans)">5</div><div><h3 style="margin-bottom:5px;font-size:.98rem">Written Report</h3><p style="font-size:.86rem">A comprehensive report outlining findings, diagnosis, and personalised recommendations for treatment and support.</p></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT -->
+<section class="section" id="treatment">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">Managing ADHD</span>
+      <h2>Treatment and <em>Support</em></h2>
+      <p>The most effective ADHD care is tailored to the individual. NICE recommends a combination of psychoeducation, practical support and, where indicated, medication and psychological intervention. The right plan depends on age, level of impairment, preferences, coexisting conditions and goals.</p>
+    </div>
+    <div class="grid2" style="margin-bottom:32px">
+      <div class="scard">
+        <div class="scard__ico">💊</div>
+        <h3>Medication</h3>
+        <p style="margin-bottom:12px">Medication is one of the most evidence-based treatments for core ADHD symptoms. NICE recommends stimulants such as methylphenidate or lisdexamfetamine as common first-line medicines in many cases, with non-stimulant options such as atomoxetine or guanfacine used when appropriate.</p>
+        <p>Medication does not cure ADHD, but it can improve attention regulation, reduce impulsivity and make it easier to use coping strategies consistently. It should always be prescribed and monitored by clinicians with relevant expertise.</p>
+      </div>
+      <div class="scard">
+        <div class="scard__ico">🧠</div>
+        <h3>Psychological and Behavioural Approaches</h3>
+        <p style="margin-bottom:12px">NICE recommends ADHD-focused support that may include psychoeducation, environmental changes, behavioural strategies and therapy. In adults, cognitive behavioural therapy (CBT) can be particularly useful for procrastination, low self-esteem, emotional regulation and the stress that accumulates around unmanaged symptoms.</p>
+        <p>School-based support, parent training and structured routines can be especially valuable for children and young people.</p>
+      </div>
+      <div class="scard">
+        <div class="scard__ico">🎯</div>
+        <h3>ADHD Coaching</h3>
+        <p>ADHD coaches help individuals identify personal challenges, build on strengths, and develop tailored systems for productivity, organisation and goal-setting. Particularly effective for adults managing ADHD in the workplace, coaching bridges the gap between understanding ADHD and consistently applying strategies day to day.</p>
+      </div>
+      <div class="scard">
+        <div class="scard__ico">🔄</div>
+        <h3>Lifestyle Adjustments</h3>
+        <p>Lifestyle changes are not a replacement for evidence-based treatment, but they can make a meaningful difference. Good sleep, regular exercise, simple routines, visual reminders, time-structuring tools and reducing avoidable distractions may all help. NICE does not recommend dietary supplements as a standard treatment for ADHD, and the evidence for broad dietary interventions remains limited.</p>
+      </div>
+    </div>
+
+    <!-- PRACTICAL TIPS DARK CARD -->
+    <div class="scard" style="background:var(--dark);border-color:rgba(255,255,255,.08)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+        <div>
+          <span class="eyebrow">Practical Strategies</span>
+          <h3 style="color:#fff;margin-bottom:12px;font-size:1.2rem">Day-to-Day Tips for Managing ADHD</h3>
+          <p style="color:rgba(255,255,255,.45);font-size:.9rem;line-height:1.7">Small, consistent changes can make a significant difference. These approaches help individuals with ADHD build reliable systems and reduce friction in daily life. Often, the best outcomes come from combining approaches rather than relying on one strategy alone.</p>
+        </div>
+        <ul class="kp">
+          <li class="kpi" style="color:rgba(255,255,255,.55)"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Break large tasks into smaller, concrete steps</li>
+          <li class="kpi" style="color:rgba(255,255,255,.55)"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Use timers and time-blocking to structure the working day</li>
+          <li class="kpi" style="color:rgba(255,255,255,.55)"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Set digital reminders for all appointments and deadlines</li>
+          <li class="kpi" style="color:rgba(255,255,255,.55)"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Exercise regularly to improve dopamine and noradrenaline regulation</li>
+          <li class="kpi" style="color:rgba(255,255,255,.55)"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Build consistent sleep and morning routines to stabilise regulation</li>
+          <li class="kpi" style="color:rgba(255,255,255,.55)"><img class="tick" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e8a020'%3E%3Ccircle cx='12' cy='12' r='12'/%3E%3Cpath fill='white' d='M9.5 16.2L5.8 12.5l1.4-1.4 2.3 2.3 5.3-5.3 1.4 1.4z'/%3E%3C/svg%3E" alt="" />Reduce environmental distractions during focused work periods</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTLOOK -->
+<section class="section" style="background:var(--cream-2)" id="outlook">
+  <div class="container">
+    <div class="two-col">
+      <div class="prose">
+        <span class="eyebrow">The Long-Term Picture</span>
+        <h2 style="margin-bottom:20px">Outlook and <em>Long-Term Impact</em></h2>
+        <h3>ADHD is Not Static</h3>
+        <p>ADHD is often a long-term condition, but it is not static. Symptoms may change over time, and many people develop coping strategies that improve functioning as they get older. Hyperactivity often becomes less outwardly obvious, while difficulties with organisation, planning, emotional regulation or sustained attention may remain. Some individuals continue to meet full diagnostic criteria in adulthood; others no longer meet the full threshold but still experience significant ADHD-related difficulties.</p>
+        <h3>The Risks of Untreated ADHD</h3>
+        <p>Untreated ADHD can have serious consequences, particularly when compounded by lack of support, stigma or coexisting conditions. Research and clinical guidance associate ADHD with educational underachievement, occupational difficulties, relationship strain, injuries, substance misuse risk and poorer mental health outcomes. At the same time, these outcomes are not inevitable.</p>
+        <h3>Health Inequalities</h3>
+        <p>Recent UK research has raised concern about broader health inequalities among adults with diagnosed ADHD. A 2025 matched cohort study published in The British Journal of Psychiatry estimated an apparent reduction in life expectancy of 6.78 years for males and 8.64 years for females with diagnosed ADHD compared with matched controls. The authors emphasised this likely reflects a complex mix of underdiagnosis, unmet support needs, mental and physical health burdens, and modifiable risks such as smoking and social disadvantage, rather than ADHD directly causing early death.</p>
+        <h3>Early Recognition Changes Outcomes</h3>
+        <p>Early recognition, appropriate treatment and supportive environments can improve functioning and quality of life substantially. For children, teenagers and adults alike, the aim is not to erase personality or difference, but to reduce impairment, improve wellbeing and help the person function in a way that reflects their actual abilities.</p>
+      </div>
+      <div>
+        <span class="eyebrow">A Clearer Way to Think About ADHD</span>
+        <h2 style="margin-bottom:20px">Not "Can't Focus" — <em>"Can't Regulate"</em></h2>
+        <p style="margin-bottom:16px">The most useful modern understanding of ADHD is not that people with ADHD "cannot pay attention", but that they have difficulty regulating attention, effort, impulse control and self-management consistently across situations.</p>
+        <p style="margin-bottom:24px">They may pay excellent attention to something urgent, novel, highly rewarding or personally fascinating, yet struggle profoundly with tasks that are routine, delayed or poorly stimulating. This is why ADHD can be so confusing both to the person affected and to the people around them.</p>
+        <div class="scard" style="background:var(--dark);border-color:rgba(255,255,255,.08);margin-bottom:20px">
+          <p style="color:rgba(255,255,255,.7);font-size:.92rem;font-style:italic;line-height:1.8">"ADHD is real, clinically recognised and treatable. A proper assessment can help distinguish it from other conditions, identify coexisting difficulties, and open the door to practical support that genuinely improves everyday life."</p>
+        </div>
+        <div class="scard">
+          <span class="eyebrow" style="margin-bottom:8px">Ready to Find Out?</span>
+          <h4 style="margin-bottom:8px">Take our clinically-informed assessment</h4>
+          <p style="font-size:.88rem;margin-bottom:16px">5 to 8 minutes. Instant results. No GP referral needed. Professional consultation available worldwide.</p>
+          <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber" style="width:100%;justify-content:center">Start the ADHD Assessment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE PAGES -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">Explore Further</span>
+      <h2>ADHD Across the <em>Lifespan</em></h2>
+      <p>ADHD looks and feels different depending on your age and circumstances. Explore our dedicated guides below.</p>
+    </div>
+    <div class="page-links">
+      <a href="https://attentiondeficittest.com/adhd-test-for-adults" class="page-link-card">
+        <div class="page-link-card__text">
+          <span>For Adults 18+</span>
+          <h3>ADHD Test for Adults</h3>
+          <p>How ADHD presents in adulthood, why it often goes undiagnosed, and how to get a professional assessment.</p>
+        </div>
+        <div class="page-link-card__arrow">→</div>
+      </a>
+      <a href="https://attentiondeficittest.com/adhd-test-for-teens" class="page-link-card">
+        <div class="page-link-card__text">
+          <span>For Teenagers 13 to 17</span>
+          <h3>ADHD Test for Teens</h3>
+          <p>ADHD in teenagers, recognising the signs, and why adolescent ADHD is so commonly missed or misdiagnosed.</p>
+        </div>
+        <div class="page-link-card__arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background:var(--cream-2)" id="faq">
+  <div class="container">
+    <div class="cta-block">
+      <span class="eyebrow">Take the First Step</span>
+      <h2>Find Out if You Have <em>ADHD</em></h2>
+      <p>Our clinically-informed assessment takes 5 to 8 minutes. Instant results, no GP referral needed, professional consultations available worldwide.</p>
+      <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Start the ADHD Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">🧠 AttentionDeficitTest<span>.com</span></div>
+        <p class="foot-tagline">Clinically-informed online ADHD assessment and professional consultation. Helping individuals worldwide get the answers they need.</p>
+        <p class="foot-tagline" style="margin-top:8px">This website provides an informational assessment only and is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+      </div>
+      <div class="foot-col"><h4>Services</h4><a href="https://attentiondeficittest.com/#hero-card">ADHD Assessment</a><a href="https://attentiondeficittest.com/#pricing">Professional Consultation</a><a href="https://attentiondeficittest.com/#pricing">Comprehensive Assessment</a><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></div>
+      <div class="foot-col"><h4>Learn</h4><a href="https://attentiondeficittest.com/adhd">What is ADHD?</a><a href="https://attentiondeficittest.com/adhd-test-for-adults">ADHD Test for Adults</a><a href="https://attentiondeficittest.com/adhd-test-for-teens">ADHD Test for Teens</a><a href="https://attentiondeficittest.com/faqs">FAQ</a></div>
+      <div class="foot-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a><a href="#">Contact Us</a></div>
+    </div>
+    <div class="foot-bottom">© 2025 AttentionDeficitTest.com — All rights reserved. SSL Secured · GDPR Compliant · Worldwide</div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solid',scrollY>30));
+  document.getElementById('nav').classList.add('solid');
+</script>
+</body>
+</html>
