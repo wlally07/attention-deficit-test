@@ -53,6 +53,14 @@
     .nav__links a{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.55);transition:color .2s}
     .nav__links a:hover{color:#fff}
     @media(max-width:768px){.nav__links{display:none}}
+    /* DROPDOWN */
+    .nav__dropdown{position:relative}
+    .nav__arrow{font-size:.6rem;opacity:.6;margin-left:2px;display:inline-block;transition:transform .2s}
+    .nav__dropdown:hover .nav__arrow{transform:rotate(180deg)}
+    .nav__sub{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(18,16,14,.97);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:8px;min-width:240px;box-shadow:0 12px 40px rgba(0,0,0,.3);list-style:none;z-index:1000}
+    .nav__dropdown:hover .nav__sub{display:block}
+    .nav__sub li a{display:block;font-size:.84rem;font-weight:500;color:rgba(255,255,255,.6);padding:9px 14px;border-radius:7px;transition:all .15s;white-space:nowrap}
+    .nav__sub li a:hover{color:#fff;background:rgba(255,255,255,.07)}
 
     /* HERO */
     .hero{background:var(--dark);min-height:100vh;display:flex;flex-direction:column;padding-top:80px;position:relative;overflow:hidden}
@@ -173,11 +181,11 @@
       </a>
       <ul class="nav__links">
         <li><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></li>
-        <li><a href="https://attentiondeficittest.com/adhd">About ADHD</a></li>
+        <li class="nav__dropdown"><a href="https://attentiondeficittest.com/adhd">About ADHD <span class="nav__arrow">&#9660;</span></a><ul class="nav__sub"><li><a href="https://attentiondeficittest.com/what-is-adhd">What is ADHD?</a></li><li><a href="https://attentiondeficittest.com/types-of-adhd">Types of ADHD</a></li><li><a href="https://attentiondeficittest.com/adhd-symptoms">ADHD Symptoms</a></li><li><a href="https://attentiondeficittest.com/adhd-related-conditions">ADHD Related Conditions</a></li><li><a href="https://attentiondeficittest.com/adhd-diagnosis">ADHD Diagnosis</a></li><li><a href="https://attentiondeficittest.com/adhd-treatment">ADHD Treatment</a></li><li><a href="https://attentiondeficittest.com/adhd-assessment-cost">Cost of a Private ADHD Assessment</a></li></ul></li>
         <li><a href="https://attentiondeficittest.com/#pricing">Pricing</a></li>
         <li><a href="https://attentiondeficittest.com/faqs">FAQ</a></li>
       </ul>
-      <a href="https://attentiondeficittest.com/assessment" class="btn btn-amber" style="padding:11px 24px;font-size:.88rem">Start Assessment</a>
+      <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber" style="padding:11px 24px;font-size:.88rem">Start Assessment</a>
     </div>
   </div>
 </nav>
@@ -192,7 +200,7 @@
         <h1 class="hero__h1">ADHD Testing for <em>Adults</em></h1>
         <p class="hero__sub">Many adults live for years not knowing their difficulties with focus, organisation and impulsivity are linked to ADHD. Our clinically-informed assessment helps you find out, quickly and privately.</p>
         <div class="hero__btns">
-          <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Start Adult ADHD Assessment</a>
+          <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber">Start Adult ADHD Assessment</a>
           <a href="#how-it-works" class="btn btn-ghost-dark">How It Works</a>
         </div>
         <div class="hero__stats">
@@ -208,12 +216,12 @@
         </div>
         <div class="qcard__list">
           <div class="qcard__item"><span class="qcard__ic">🧠</span>Based on DSM-5 criteria and the WHO ASRS v1.1 scale</div>
-          <div class="qcard__item"><span class="qcard__ic">⚡</span>Takes 5 to 8 minutes with instant personalised results</div>
+          <div class="qcard__item"><span class="qcard__ic">⚡</span>Takes approximately 18 minutes with instant personalised results</div>
           <div class="qcard__item"><span class="qcard__ic">📋</span>Professional consultation available after the assessment</div>
           <div class="qcard__item"><span class="qcard__ic">🔒</span>Fully private, GDPR compliant, no data shared with third parties</div>
         </div>
         <div class="qcard__foot">
-          <button class="qbtn" onclick="window.location='https://attentiondeficittest.com/#hero-card'">Start the Assessment</button>
+          <button class="qbtn" onclick="window.location='https://attentiondeficittest.com/assessment'">Start the Assessment</button>
           <p class="qcard__disc">By continuing you agree to our Terms &amp; Conditions. This assessment is for informational purposes only and is not a clinical diagnosis.</p>
         </div>
       </div>
@@ -249,7 +257,7 @@
         <h2 style="margin-bottom:14px">From Assessment to <em>Clarity</em></h2>
         <p style="margin-bottom:32px">No GP referral needed. No waiting lists. A clear path to answers for adults who have been waiting too long.</p>
         <div class="steps">
-          <div class="step"><div class="step__num">1</div><div><h3>Take the Adult ADHD Assessment</h3><p>Complete our clinically-informed assessment in 5 to 8 minutes. Instant personalised results covering attention, impulse control, and executive function.</p></div></div>
+          <div class="step"><div class="step__num">1</div><div><h3>Take the Adult ADHD Assessment</h3><p>Complete our clinically-informed assessment in approximately 18 minutes. Instant personalised results covering attention, impulse control, and executive function.</p></div></div>
           <div class="step"><div class="step__num">2</div><div><h3>Review Your Results &amp; Book</h3><p>Receive a detailed results summary instantly. If a consultation is recommended, book securely through our encrypted Stripe checkout with no hidden charges.</p></div></div>
           <div class="step"><div class="step__num">3</div><div><h3>Meet a Licensed Assessor</h3><p>A 60-minute consultation with a specialist, available online via secure video call or face to face. Receive a written report and personalised next steps.</p></div></div>
         </div>
@@ -377,11 +385,35 @@
     <div class="cta-block">
       <span class="eyebrow">Take The First Step</span>
       <h2>You Deserve Answers. <em>Start Today.</em></h2>
-      <p>Our assessment takes 5 to 8 minutes. Instant results, no GP referral needed, professional consultations available online or face to face in over 40 countries.</p>
-      <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Start the Adult ADHD Assessment</a>
+      <p>Our assessment takes approximately 18 minutes. Instant results, no GP referral needed, professional consultations available online or face to face in over 40 countries.</p>
+      <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber">Start the Adult ADHD Assessment</a>
     </div>
   </div>
 </section>
+
+<!-- LEARN MORE BOX -->
+<div style="padding:60px 0 50px">
+  <div class="container">
+    <div style="background:#1c1a17;border-radius:20px;padding:44px 48px;display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start">
+      <div>
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:12px">Learn About ADHD</div>
+        <h2 style="font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px">Everything you need to know about ADHD</h2>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.65">At <a href="https://attentiondeficittest.com" style="color:rgba(255,255,255,.4);text-decoration:none">Attention Deficit Test</a>, our <a href="https://attentiondeficittest.com/adhd" style="color:rgba(255,255,255,.4);text-decoration:none">ADHD</a> resource library covers every aspect of <a href="https://attentiondeficittest.com/adhd" style="color:rgba(255,255,255,.4);text-decoration:none">ADHD</a>, from understanding symptoms and types to navigating diagnosis, treatment, and related conditions.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
+        <a href="https://attentiondeficittest.com/what-is-adhd" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🧠</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">What is ADHD?</span></a>
+        <a href="https://attentiondeficittest.com/types-of-adhd" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">📊</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">Types of ADHD</span></a>
+        <a href="https://attentiondeficittest.com/adhd-symptoms" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">📋</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD Symptoms</span></a>
+        <a href="https://attentiondeficittest.com/adhd-related-conditions" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🔗</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">Related Conditions</span></a>
+        <a href="https://attentiondeficittest.com/adhd-diagnosis" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🩺</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD Diagnosis</span></a>
+        <a href="https://attentiondeficittest.com/adhd-treatment" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">💊</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD Treatment</span></a>
+        <a href="https://attentiondeficittest.com/adhd-test-for-adults" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">👤</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD in Adults</span></a>
+        <a href="https://attentiondeficittest.com/adhd-test-for-teens" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🎓</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD in Teens</span></a>
+        <a href="https://attentiondeficittest.com/adhd-assessment-cost" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">💷</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">Assessment Costs</span></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -392,11 +424,11 @@
         <p class="foot-tagline">Clinically-informed online ADHD assessment and professional consultation. Helping individuals worldwide get the answers they need.</p>
         <p class="foot-tagline" style="margin-top:8px">This website provides an informational assessment only and is not a substitute for professional medical advice, diagnosis, or treatment.</p>
       </div>
-      <div class="foot-col"><h4>Services</h4><a href="https://attentiondeficittest.com/#hero-card">ADHD Assessment</a><a href="https://attentiondeficittest.com/#pricing">Professional Consultation</a><a href="https://attentiondeficittest.com/#pricing">Comprehensive Assessment</a><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></div>
+      <div class="foot-col"><h4>Services</h4><a href="https://attentiondeficittest.com/adhd-assessment">ADHD Assessment</a><a href="https://attentiondeficittest.com/#pricing">Professional Consultation</a><a href="https://attentiondeficittest.com/#pricing">Comprehensive Assessment</a><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></div>
       <div class="foot-col"><h4>Learn</h4><a href="https://attentiondeficittest.com/adhd">What is ADHD?</a><a href="https://attentiondeficittest.com/adhd-test-for-adults">ADHD Test for Adults</a><a href="https://attentiondeficittest.com/adhd-test-for-teens">ADHD Test for Teens</a><a href="https://attentiondeficittest.com/faqs">FAQ</a></div>
       <div class="foot-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a><a href="#">Contact Us</a></div>
     </div>
-    <div class="foot-bottom">© 2025 AttentionDeficitTest.com — All rights reserved. SSL Secured · GDPR Compliant · Worldwide</div>
+    <div class="foot-bottom">© 2025 AttentionDeficitTest.com , All rights reserved. SSL Secured · GDPR Compliant · Worldwide</div>
   </div>
 </footer>
 

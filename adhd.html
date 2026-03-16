@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What is ADHD? | Attention-Deficit/Hyperactivity Disorder Explained | AttentionDeficitTest.com</title>
-  <meta name="description" content="What is ADHD? A complete guide to Attention-Deficit/Hyperactivity Disorder , causes, symptoms, types, diagnosis and treatment for adults, teens and children." />
+  <title>ADHD | Attention Deficit Hyperactivity Disorder | AttentionDeficitTest.com</title>
+  <meta name="description" content="ADHD. A complete guide to Attention-Deficit/Hyperactivity Disorder, causes, symptoms, types, diagnosis and treatment for adults, teens and children." />
   <link rel="canonical" href="https://attentiondeficittest.com/adhd" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"What is ADHD?","url":"https://attentiondeficittest.com/adhd","description":"A complete guide to Attention-Deficit/Hyperactivity Disorder , causes, symptoms, types, diagnosis and treatment.","about":{"@type":"MedicalCondition","name":"Attention-Deficit/Hyperactivity Disorder (ADHD)","alternateName":"ADD"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,6 +55,14 @@
     .nav__links a{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.55);transition:color .2s}
     .nav__links a:hover,.nav__links a.active{color:#fff}
     @media(max-width:768px){.nav__links{display:none}}
+    /* DROPDOWN */
+    .nav__dropdown{position:relative}
+    .nav__arrow{font-size:.6rem;opacity:.6;margin-left:2px;display:inline-block;transition:transform .2s}
+    .nav__dropdown:hover .nav__arrow{transform:rotate(180deg)}
+    .nav__sub{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(18,16,14,.97);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:8px;min-width:240px;box-shadow:0 12px 40px rgba(0,0,0,.3);list-style:none;z-index:1000}
+    .nav__dropdown:hover .nav__sub{display:block}
+    .nav__sub li a{display:block;font-size:.84rem;font-weight:500;color:rgba(255,255,255,.6);padding:9px 14px;border-radius:7px;transition:all .15s;white-space:nowrap}
+    .nav__sub li a:hover{color:#fff;background:rgba(255,255,255,.07)}
 
     /* PAGE HERO */
     .page-hero{background:var(--dark);padding:160px 0 100px;position:relative;overflow:hidden}
@@ -194,11 +202,11 @@
       </a>
       <ul class="nav__links">
         <li><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></li>
-        <li><a href="https://attentiondeficittest.com/adhd" class="active">About ADHD</a></li>
+        <li class="nav__dropdown"><a href="https://attentiondeficittest.com/adhd" class="active">About ADHD <span class="nav__arrow">&#9660;</span></a><ul class="nav__sub"><li><a href="https://attentiondeficittest.com/what-is-adhd">What is ADHD?</a></li><li><a href="https://attentiondeficittest.com/types-of-adhd">Types of ADHD</a></li><li><a href="https://attentiondeficittest.com/adhd-symptoms">ADHD Symptoms</a></li><li><a href="https://attentiondeficittest.com/adhd-related-conditions">ADHD Related Conditions</a></li><li><a href="https://attentiondeficittest.com/adhd-diagnosis">ADHD Diagnosis</a></li><li><a href="https://attentiondeficittest.com/adhd-treatment">ADHD Treatment</a></li><li><a href="https://attentiondeficittest.com/adhd-assessment-cost">Cost of a Private ADHD Assessment</a></li></ul></li>
         <li><a href="https://attentiondeficittest.com/#pricing">Pricing</a></li>
         <li><a href="https://attentiondeficittest.com/faqs">FAQ</a></li>
       </ul>
-      <a href="https://attentiondeficittest.com/assessment" class="btn btn-amber" style="padding:11px 24px;font-size:.88rem">Start Assessment</a>
+      <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber" style="padding:11px 24px;font-size:.88rem">Start Assessment</a>
     </div>
   </div>
 </nav>
@@ -213,10 +221,10 @@
         <span>/</span>
         <span style="color:rgba(255,255,255,.6)">About ADHD</span>
       </div>
-      <h1>What is <em>ADHD</em>?</h1>
+      <h1>ADHD</h1>
       <p>Attention-Deficit/Hyperactivity Disorder is one of the most common neurodevelopmental conditions in the world, yet it remains widely misunderstood. This guide explains what ADHD is, how it affects people across all ages, and what can be done about it.</p>
       <div class="page-hero__btns">
-        <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Take the Assessment</a>
+        <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber">Take the Assessment</a>
         <a href="#types" class="btn btn-ghost-dark">Explore ADHD Types</a>
       </div>
     </div>
@@ -234,8 +242,8 @@
       <a href="#causes" class="jump-link">Causes</a>
       <a href="#diagnosis" class="jump-link">Diagnosis</a>
       <a href="#treatment" class="jump-link">Treatment</a>
-      <a href="#outlook" class="jump-link">Outlook</a>
-      <a href="#faq" class="jump-link">FAQ</a>
+      <a href="#costs" class="jump-link">Costs</a>
+      <a href="https://attentiondeficittest.com/faqs" class="jump-link">FAQ</a>
     </div>
   </div>
 </nav>
@@ -275,7 +283,7 @@
           <span class="eyebrow" style="margin-bottom:6px">Is This You?</span>
           <h4 style="margin-bottom:8px;font-size:1rem">Find out in 5 minutes</h4>
           <p style="font-size:.88rem;margin-bottom:16px">Our clinically-informed assessment is based on DSM-5 and WHO ASRS criteria. Instant results, no GP referral needed.</p>
-          <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber" style="width:100%;justify-content:center">Start the Assessment</a>
+          <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber" style="width:100%;justify-content:center">Start the Assessment</a>
         </div>
       </div>
     </div>
@@ -574,8 +582,8 @@
         <div class="scard">
           <span class="eyebrow" style="margin-bottom:8px">Ready to Find Out?</span>
           <h4 style="margin-bottom:8px">Take our clinically-informed assessment</h4>
-          <p style="font-size:.88rem;margin-bottom:16px">5 to 8 minutes. Instant results. No GP referral needed. Professional consultation available worldwide.</p>
-          <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber" style="width:100%;justify-content:center">Start the ADHD Assessment</a>
+          <p style="font-size:.88rem;margin-bottom:16px">18 minutes. Instant results. No GP referral needed. Professional consultation available worldwide.</p>
+          <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber" style="width:100%;justify-content:center">Start the ADHD Assessment</a>
         </div>
       </div>
     </div>
@@ -611,17 +619,178 @@
   </div>
 </section>
 
+<!-- COSTS SECTION -->
+<section class="section" id="costs">
+  <div class="container">
+    <div class="section-hd">
+      <span class="eyebrow">Assessment Costs</span>
+      <h2>How Much Does an <em>ADHD Assessment</em> Cost?</h2>
+      <p>The cost of an ADHD assessment varies depending on whether you access the NHS or a private provider, where you are based, and the type of evaluation you need. Here is a brief overview.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-top:32px">
+      <div style="background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--sh-sm);border-top:3px solid var(--amber)">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);margin-bottom:10px">NHS, United Kingdom</div>
+        <div style="font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:8px">Free</div>
+        <p style="font-size:.86rem">NHS ADHD assessments are free at the point of use. However, waiting times range from several months to over 10 years in some areas of England.</p>
+      </div>
+      <div style="background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--sh-sm);border-top:3px solid var(--amber)">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);margin-bottom:10px">Private, United Kingdom</div>
+        <div style="font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:8px">£530–£2,300</div>
+        <p style="font-size:.86rem">Private adult ADHD assessments in the UK average around £1,200. Costs vary by region, provider, and the depth of evaluation required.</p>
+      </div>
+      <div style="background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--sh-sm);border-top:3px solid var(--amber)">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);margin-bottom:10px">Private, United States</div>
+        <div style="font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:8px">$200–$5,000+</div>
+        <p style="font-size:.86rem">ADHD testing in the USA ranges from a basic $200 screening to a full neuropsychological evaluation costing $5,000 or more. Insurance may cover part or all of the cost.</p>
+      </div>
+      <div style="background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--sh-sm);border-top:3px solid var(--amber)">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);margin-bottom:10px">AttentionDeficitTest.com</div>
+        <div style="font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:8px">£2.99</div>
+        <p style="font-size:.86rem">Our 100-question clinically-informed assessment covers 20 symptom domains and delivers instant personalised results. A meaningful first step before committing to a full clinical evaluation.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="https://attentiondeficittest.com/adhd-assessment-cost" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:2px solid var(--amber);color:var(--amber);font-family:var(--sans);font-weight:700;font-size:.92rem;padding:13px 28px;border-radius:100px;transition:all .2s" onmouseover="this.style.background='var(--amber)';this.style.color='var(--dark)'" onmouseout="this.style.background='transparent';this.style.color='var(--amber)'">Full Guide to ADHD Assessment Costs →</a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="section" style="background:var(--cream-2)" id="faq">
   <div class="container">
     <div class="cta-block">
       <span class="eyebrow">Take the First Step</span>
       <h2>Find Out if You Have <em>ADHD</em></h2>
-      <p>Our clinically-informed assessment takes 5 to 8 minutes. Instant results, no GP referral needed, professional consultations available worldwide.</p>
-      <a href="https://attentiondeficittest.com/#hero-card" class="btn btn-amber">Start the ADHD Assessment</a>
+      <p>Our clinically-informed assessment takes approximately 18 minutes. Instant results, no GP referral needed, professional consultations available worldwide.</p>
+      <a href="https://attentiondeficittest.com/adhd-assessment" class="btn btn-amber">Start the ADHD Assessment</a>
     </div>
   </div>
 </section>
+
+<!-- FAQ SECTION -->
+<section class="section" style="background:var(--cream)" id="faq-questions">
+  <div class="container" style="max-width:800px">
+    <div style="text-align:center;margin-bottom:40px">
+      <span class="eyebrow" style="font-size:1.1rem;font-weight:700;letter-spacing:.02em">Common Questions</span>
+      <p style="color:var(--ink-soft);font-size:.95rem;margin-top:10px">For a full list of questions and answers, visit our <a href="https://attentiondeficittest.com/faqs" style="color:var(--amber);text-decoration:none;font-weight:600">Frequently Asked Questions</a> page.</p>
+    </div>
+    <div class="flist">
+
+      <details class="fi"><summary>What is ADHD? <span class="tog">+</span></summary><div class="fb">
+        <p>ADHD stands for Attention-Deficit/Hyperactivity Disorder. It is a neurodevelopmental condition, which means it affects how the brain develops and manages skills such as attention, impulse control, activity levels, planning and self-organisation. <a href="https://attentiondeficittest.com/what-is-adhd" style="color:var(--amber);text-decoration:none;font-weight:600">ADHD</a> is not simply about being distracted or energetic. For a diagnosis to be made, <a href="https://attentiondeficittest.com/adhd-symptoms" style="color:var(--amber);text-decoration:none;font-weight:600">symptoms</a> must be ongoing, present in more than one setting, and significant enough to affect daily life. ADHD is a recognised medical condition and is not caused by laziness, poor discipline or bad parenting. With the right understanding, support and <a href="https://attentiondeficittest.com/adhd-treatment" style="color:var(--amber);text-decoration:none;font-weight:600">treatment</a>, many people with ADHD manage their symptoms well and live successful, fulfilling lives.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="what is adhd" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">ADHD is a recognised neurodevelopmental condition</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd attention impulsivity" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">It affects attention, impulsivity and activity levels</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd children teenagers adults" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">It can affect children, teenagers and adults</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd diagnostic criteria" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Symptoms must cause real-life difficulties to meet <a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">diagnostic criteria</a></span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd management support treatment" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">ADHD can be managed with the right support and <a href="https://attentiondeficittest.com/adhd-treatment" style="color:var(--amber);text-decoration:none;font-weight:600">treatment</a></span></li>
+        </ul>
+      </div></details>
+
+      <details class="fi"><summary>What are the types of ADHD? <span class="tog">+</span></summary><div class="fb">
+        <p>ADHD is usually described in three presentations, sometimes informally called types. These are predominantly inattentive, predominantly hyperactive-impulsive, and combined presentation. The <a href="https://attentiondeficittest.com/types-of-adhd" style="color:var(--amber);text-decoration:none;font-weight:600">inattentive presentation</a> is often seen in people who struggle most with concentration, forgetfulness, losing things, poor organisation and difficulty completing tasks. The hyperactive-impulsive presentation is more associated with restlessness, talking excessively, interrupting and acting without thinking. The combined presentation includes significant <a href="https://attentiondeficittest.com/adhd-symptoms" style="color:var(--amber);text-decoration:none;font-weight:600">symptoms</a> from both groups. These presentations can change over time, which is one reason people sometimes go undiagnosed for years.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="types of adhd" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)"><a href="https://attentiondeficittest.com/types-of-adhd" style="color:var(--amber);text-decoration:none;font-weight:600">ADHD has three main presentations</a></span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="inattentive hyperactive combined adhd" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">These are inattentive, hyperactive-impulsive and combined</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd symptoms change with age" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Symptoms can change with age</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd not always hyperactive" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Not everyone with ADHD is obviously hyperactive</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd presentation day to day" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">The presentation helps explain how symptoms show up day to day</span></li>
+        </ul>
+      </div></details>
+
+      <details class="fi"><summary>What are the symptoms of ADHD? <span class="tog">+</span></summary><div class="fb">
+        <p>The main <a href="https://attentiondeficittest.com/adhd-symptoms" style="color:var(--amber);text-decoration:none;font-weight:600">symptoms of ADHD</a> fall into three broad areas: inattention, hyperactivity and impulsivity. Inattention can include being easily distracted, forgetting things, struggling to follow through on tasks, losing important items, making careless mistakes and finding it hard to stay focused. Hyperactivity may involve fidgeting, difficulty sitting still, feeling restless or constantly needing to be active. In adults, hyperactivity is often less visible and may feel more like inner restlessness than obvious movement. Impulsivity can show up as interrupting others, blurting things out, acting without thinking or making quick decisions without considering consequences. Symptoms must be persistent and have a meaningful effect on daily functioning before <a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">ADHD is diagnosed</a>.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd symptoms inattention hyperactivity impulsivity" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Symptoms include inattention, hyperactivity and impulsivity</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd in adults restlessness" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)"><a href="https://attentiondeficittest.com/adhd-test-for-adults" style="color:var(--amber);text-decoration:none;font-weight:600">Adults</a> may experience inner restlessness rather than obvious overactivity</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd forgetfulness distraction organisation" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Common issues include forgetfulness, distraction and poor organisation</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd impulsivity behaviour decision making" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Impulsivity can affect behaviour, speech and decision-making</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd persistent impairing symptoms" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Symptoms must be persistent and impairing to support <a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">diagnosis</a></span></li>
+        </ul>
+      </div></details>
+
+      <details class="fi"><summary>What treatment is available for ADHD? <span class="tog">+</span></summary><div class="fb">
+        <p>ADHD <a href="https://attentiondeficittest.com/adhd-treatment" style="color:var(--amber);text-decoration:none;font-weight:600">treatment</a> usually involves a combination of education, practical support, psychological strategies and sometimes medication. Treatment depends on the person's age, symptoms and how much those symptoms affect daily life. Medication is often one of the most effective treatments for core ADHD symptoms and may include stimulant medicines such as methylphenidate or lisdexamfetamine, or non-stimulant options such as atomoxetine or guanfacine. Many people also benefit from behavioural support, routines, coaching, school or workplace adjustments, and therapies such as cognitive behavioural therapy. The best <a href="https://attentiondeficittest.com/adhd-treatment" style="color:var(--amber);text-decoration:none;font-weight:600">treatment plan</a> is usually individual and may need adjusting over time.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd treatment medication therapy" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)"><a href="https://attentiondeficittest.com/adhd-treatment" style="color:var(--amber);text-decoration:none;font-weight:600">Treatment</a> may include medication, therapy and practical support</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd treatment age symptoms" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">The best plan depends on age, symptoms and level of difficulty</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd medication reduce symptoms" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Medication can help reduce core ADHD symptoms</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd school workplace adjustments" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Support can also include school or workplace adjustments</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd treatment individualised" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">ADHD treatment is usually individualised rather than one-size-fits-all</span></li>
+        </ul>
+      </div></details>
+
+      <details class="fi"><summary>What causes ADHD? <span class="tog">+</span></summary><div class="fb">
+        <p>There is no single known cause of ADHD, but research shows it is strongly linked to brain development and genetics. ADHD tends to run in families, which suggests a significant inherited component. Scientists believe that several genetic and biological factors contribute. Some early-life factors may also increase risk, such as premature birth, low birth weight or exposure to certain toxins during pregnancy. It is important to be clear that ADHD is not caused by bad parenting, lack of discipline or too much sugar. These myths can be harmful because they blame individuals or families for a medical condition that is far more complex.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="causes of adhd brain development genetics" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">ADHD is linked to brain development and genetics</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd runs in families" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">It often runs in families</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd early life risk factors" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Some early-life factors may increase risk</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd not caused by bad parenting" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">It is not caused by bad parenting</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd no single cause" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">There is no single cause in most cases</span></li>
+        </ul>
+      </div></details>
+
+      <details class="fi"><summary>How is ADHD diagnosed? <span class="tog">+</span></summary><div class="fb">
+        <p>ADHD is <a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">diagnosed</a> through a comprehensive clinical assessment carried out by a suitably qualified healthcare professional. There is currently no blood test, brain scan or single lab test that can confirm ADHD on its own. A clinician will look at current <a href="https://attentiondeficittest.com/adhd-symptoms" style="color:var(--amber);text-decoration:none;font-weight:600">symptoms</a>, childhood history, daily functioning and whether symptoms occur in more than one setting. They will also consider whether another condition could better explain the symptoms, or whether ADHD may exist alongside other issues such as anxiety, depression, <a href="https://attentiondeficittest.com/adhd-related-conditions" style="color:var(--amber);text-decoration:none;font-weight:600">related conditions</a> or sleep problems.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd diagnosis clinical assessment" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">ADHD is diagnosed through a full <a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">clinical assessment</a></span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd no single medical test" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">There is no single medical test for ADHD</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd questionnaires rating scales" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Questionnaires may help, but are not enough alone</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd affects multiple settings" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Symptoms must affect more than one area of life</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd other possible explanations" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">A clinician will also look for other possible explanations</span></li>
+        </ul>
+      </div></details>
+
+      <details class="fi"><summary>Can adults have ADHD? <span class="tog">+</span></summary><div class="fb">
+        <p>Yes, <a href="https://attentiondeficittest.com/adhd-test-for-adults" style="color:var(--amber);text-decoration:none;font-weight:600">adults can have ADHD</a>, and many do. In some people, ADHD is recognised in childhood and continues into adult life. In others, the condition is only identified later, often after years of struggling with focus, organisation, time management, procrastination or emotional overwhelm. Adult ADHD may look different from childhood ADHD. Instead of obvious hyperactivity, an adult may experience inner restlessness, racing thoughts, chronic disorganisation or difficulty managing responsibilities. Recognition in adulthood can be life-changing because it helps people understand long-standing patterns and access appropriate support, adjustments and <a href="https://attentiondeficittest.com/adhd-treatment" style="color:var(--amber);text-decoration:none;font-weight:600">treatment</a> options.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd adult life" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">ADHD can continue into <a href="https://attentiondeficittest.com/adhd-test-for-adults" style="color:var(--amber);text-decoration:none;font-weight:600">adult life</a></span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd diagnosed as adult" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Some people are only diagnosed as adults</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adult adhd looks different from childhood" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Adult ADHD may look different from childhood ADHD</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd work relationships daily routines" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">It can affect work, relationships and daily routines</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd adult diagnosis support treatment" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)"><a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">Diagnosis</a> in adulthood can help people access support and treatment</span></li>
+        </ul>
+      </div></details>
+
+      <details class="fi"><summary>Can ADHD occur alongside other conditions? <span class="tog">+</span></summary><div class="fb">
+        <p>Yes, ADHD often occurs alongside other conditions, and this is one reason assessment needs to be thorough. Common conditions that may occur alongside ADHD include anxiety, depression, sleep problems, autism spectrum disorder, learning difficulties and substance misuse issues. These <a href="https://attentiondeficittest.com/adhd-related-conditions" style="color:var(--amber);text-decoration:none;font-weight:600">related conditions</a> can overlap with ADHD symptoms, making <a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">diagnosis</a> more complex. Identifying all conditions present is important because each issue may need different support or treatment. A good assessment looks at the whole picture rather than assuming all symptoms come from one cause.</p>
+        <ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd co-occurring conditions" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">ADHD can occur alongside other <a href="https://attentiondeficittest.com/adhd-related-conditions" style="color:var(--amber);text-decoration:none;font-weight:600">conditions</a></span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd anxiety depression sleep problems" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Common overlaps include anxiety, depression and sleep problems</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd autism learning difficulties" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Autism and learning difficulties may also co-occur</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd overlapping symptoms complex diagnosis" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Overlapping symptoms can make <a href="https://attentiondeficittest.com/adhd-diagnosis" style="color:var(--amber);text-decoration:none;font-weight:600">diagnosis</a> more complex</span></li>
+          <li style="display:flex;align-items:center;gap:10px"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23e8a020'/%3E%3Cpath d='M5 10l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="adhd assessment whole clinical picture" width="20" height="20" /><span style="font-size:.88rem;color:var(--ink-soft)">Good assessment looks at the whole clinical picture</span></li>
+        </ul>
+      </div></details>
+
+    </div>
+  </div>
+</section>
+
+<!-- LEARN MORE BOX -->
+<div style="padding:60px 0 50px">
+  <div class="container">
+    <div style="background:#1c1a17;border-radius:20px;padding:44px 48px;display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start">
+      <div>
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:12px">Learn About ADHD</div>
+        <h2 style="font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px">Everything you need to know about ADHD</h2>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.65">At <a href="https://attentiondeficittest.com" style="color:rgba(255,255,255,.4);text-decoration:none">Attention Deficit Test</a>, our <a href="https://attentiondeficittest.com/adhd" style="color:rgba(255,255,255,.4);text-decoration:none">ADHD</a> resource library covers every aspect of <a href="https://attentiondeficittest.com/adhd" style="color:rgba(255,255,255,.4);text-decoration:none">ADHD</a>, from understanding symptoms and types to navigating diagnosis, treatment, and related conditions.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
+        <a href="https://attentiondeficittest.com/what-is-adhd" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🧠</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">What is ADHD?</span></a>
+        <a href="https://attentiondeficittest.com/types-of-adhd" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">📊</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">Types of ADHD</span></a>
+        <a href="https://attentiondeficittest.com/adhd-symptoms" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">📋</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD Symptoms</span></a>
+        <a href="https://attentiondeficittest.com/adhd-related-conditions" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🔗</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">Related Conditions</span></a>
+        <a href="https://attentiondeficittest.com/adhd-diagnosis" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🩺</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD Diagnosis</span></a>
+        <a href="https://attentiondeficittest.com/adhd-treatment" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">💊</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD Treatment</span></a>
+        <a href="https://attentiondeficittest.com/adhd-test-for-adults" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">👤</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD in Adults</span></a>
+        <a href="https://attentiondeficittest.com/adhd-test-for-teens" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">🎓</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">ADHD in Teens</span></a>
+        <a href="https://attentiondeficittest.com/adhd-assessment-cost" style="display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:10px;transition:background .15s;text-decoration:none" onmouseover="this.style.background='rgba(255,255,255,.05)'" onmouseout="this.style.background='transparent'"><span style="width:28px;height:28px;background:rgba(232,160,32,.15);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem">💷</span><span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)">Assessment Costs</span></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -632,7 +801,7 @@
         <p class="foot-tagline">Clinically-informed online ADHD assessment and professional consultation. Helping individuals worldwide get the answers they need.</p>
         <p class="foot-tagline" style="margin-top:8px">This website provides an informational assessment only and is not a substitute for professional medical advice, diagnosis, or treatment.</p>
       </div>
-      <div class="foot-col"><h4>Services</h4><a href="https://attentiondeficittest.com/#hero-card">ADHD Assessment</a><a href="https://attentiondeficittest.com/#pricing">Professional Consultation</a><a href="https://attentiondeficittest.com/#pricing">Comprehensive Assessment</a><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></div>
+      <div class="foot-col"><h4>Services</h4><a href="https://attentiondeficittest.com/adhd-assessment">ADHD Assessment</a><a href="https://attentiondeficittest.com/#pricing">Professional Consultation</a><a href="https://attentiondeficittest.com/#pricing">Comprehensive Assessment</a><a href="https://attentiondeficittest.com/#how-it-works">How It Works</a></div>
       <div class="foot-col"><h4>Learn</h4><a href="https://attentiondeficittest.com/adhd">What is ADHD?</a><a href="https://attentiondeficittest.com/adhd-test-for-adults">ADHD Test for Adults</a><a href="https://attentiondeficittest.com/adhd-test-for-teens">ADHD Test for Teens</a><a href="https://attentiondeficittest.com/faqs">FAQ</a></div>
       <div class="foot-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a><a href="#">Contact Us</a></div>
     </div>
