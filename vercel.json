@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/adhd", "destination": "/adhd.html" },
+    { "source": "/faqs", "destination": "/faqs.html" },
+    { "source": "/adhd-test-for-adults", "destination": "/adhd-test-for-adults.html" },
+    { "source": "/adhd-test-for-teens", "destination": "/adhd-test-for-teens.html" },
+    { "source": "/adhd-assessment", "destination": "/adhd-assessment.html" },
+    { "source": "/adhd-assessment-cost", "destination": "/adhd-assessment-cost.html" },
+    { "source": "/what-is-adhd", "destination": "/what-is-adhd.html" },
+    { "source": "/types-of-adhd", "destination": "/types-of-adhd.html" },
+    { "source": "/adhd-symptoms", "destination": "/adhd-symptoms.html" },
+    { "source": "/adhd-related-conditions", "destination": "/adhd-related-conditions.html" },
+    { "source": "/adhd-diagnosis", "destination": "/adhd-diagnosis.html" },
+    { "source": "/adhd-treatment", "destination": "/adhd-treatment.html" }
+  ]
+}
