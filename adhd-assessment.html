@@ -103,28 +103,24 @@
     .q-text { font-size:.9rem; color:var(--ink); text-align:center; margin-bottom:16px; line-height:1.55; font-weight:500 }
     .q-options { display:flex; justify-content:center; gap:10px; flex-wrap:wrap }
     .q-opt { display:flex; flex-direction:column; align-items:center; gap:6px; font-size:.62rem; color:var(--ink-muted); text-align:center; width:68px; cursor:pointer; user-select:none; -webkit-user-select:none; position:relative }
-    .q-opt .dot { width:40px; height:40px; border-radius:50%; border:2.5px solid; transition:transform .15s, box-shadow .15s; pointer-events:none; display:flex; align-items:center; justify-content:center; position:relative }
+    .q-opt .dot { width:44px; height:44px; border-radius:50%; border:2.5px solid; transition:all .18s ease; pointer-events:none; display:flex; align-items:center; justify-content:center }
     .q-opt .dot .tick { display:none; pointer-events:none }
-    .q-opt:hover .dot { transform:scale(1.1) }
+    .q-opt:hover .dot { transform:scale(1.08); opacity:.85 }
     /* Unselected colours */
     .q-opt.opt-sd .dot { background:#fff0f0; border-color:#f4a5a5 }
     .q-opt.opt-dg .dot { background:#fff8ee; border-color:#f5c878 }
     .q-opt.opt-nt .dot { background:#f0f2f5; border-color:#c5ced9 }
     .q-opt.opt-ag .dot { background:#f0f9f1; border-color:#8ecf92 }
     .q-opt.opt-sa .dot { background:#eef7f7; border-color:#72bfbf }
-    /* Selected state - deeper colour + tick visible */
-    .q-opt.selected .dot { border-width:3px; box-shadow:0 0 0 3px rgba(0,0,0,.1); transform:scale(1.12) }
+    /* Selected — strong fill + thick border + scale up + tick */
+    .q-opt.selected .dot { border-width:3px; transform:scale(1.18); box-shadow:0 4px 14px rgba(0,0,0,.18) }
     .q-opt.selected .dot .tick { display:block }
-    .q-opt.selected.opt-sd .dot { background:#ffd6d6; border-color:#e05555 }
-    .q-opt.selected.opt-dg .dot { background:#fde8c8; border-color:#d4900a }
-    .q-opt.selected.opt-nt .dot { background:#dde3ec; border-color:#8895a8 }
-    .q-opt.selected.opt-ag .dot { background:#c8eacc; border-color:#3a9e42 }
-    .q-opt.selected.opt-sa .dot { background:#b8e0e0; border-color:#1e9898 }
-    .q-opt.selected.opt-sd .dot .tick { color:#c0392b }
-    .q-opt.selected.opt-dg .dot .tick { color:#b07d10 }
-    .q-opt.selected.opt-nt .dot .tick { color:#4a5568 }
-    .q-opt.selected.opt-ag .dot .tick { color:#276d2c }
-    .q-opt.selected.opt-sa .dot .tick { color:#0e7272 }
+    .q-opt.selected.opt-sd .dot { background:#e05555; border-color:#c0392b }
+    .q-opt.selected.opt-dg .dot { background:#e8a020; border-color:#b07d10 }
+    .q-opt.selected.opt-nt .dot { background:#8895a8; border-color:#4a5568 }
+    .q-opt.selected.opt-ag .dot { background:#3a9e42; border-color:#276d2c }
+    .q-opt.selected.opt-sa .dot { background:#1e9898; border-color:#0e7272 }
+    .q-opt.selected .dot .tick { color:#fff }
     .q-opt.selected .q-label { font-weight:700; color:var(--ink) }
     .all-answered-note { text-align:center; font-size:.74rem; color:var(--green); margin-top:6px; font-weight:600 }
     @media(max-width:480px) { .q-opt { width:52px; font-size:.58rem } .q-opt .dot { width:34px; height:34px } .q-options { gap:6px } }
