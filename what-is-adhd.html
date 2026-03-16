@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N2FBW4JS6G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N2FBW4JS6G');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What is ADHD? | Attention-Deficit/Hyperactivity Disorder | AttentionDeficitTest.com</title>
@@ -56,8 +64,8 @@
     .nav__dropdown{position:relative}
     .nav__arrow{font-size:.6rem;opacity:.6;margin-left:2px;display:inline-block;transition:transform .2s}
     .nav__dropdown:hover .nav__arrow{transform:rotate(180deg)}
-    .nav__sub{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(18,16,14,.97);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:8px;min-width:240px;box-shadow:0 12px 40px rgba(0,0,0,.3);list-style:none;z-index:1000}
-    .nav__dropdown:hover .nav__sub{display:block}
+    .nav__sub{display:none;position:absolute;top:calc(100% - 1px);left:50%;transform:translateX(-50%);background:rgba(18,16,14,.97);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:8px;min-width:240px;box-shadow:0 12px 40px rgba(0,0,0,.3);list-style:none;z-index:1000}
+    .nav__dropdown:hover .nav__sub{display:block} .nav__sub::before{content:"";display:block;height:12px}
     .nav__sub li a{display:block;font-size:.84rem;font-weight:500;color:rgba(255,255,255,.6);padding:9px 14px;border-radius:7px;transition:all .15s;white-space:nowrap}
     .nav__sub li a:hover{color:#fff;background:rgba(255,255,255,.07)}
 

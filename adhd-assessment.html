@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N2FBW4JS6G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N2FBW4JS6G');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ADHD Assessment | AttentionDeficitTest.com</title>
@@ -88,7 +96,7 @@
     .q-text { font-size:.9rem; color:var(--ink); text-align:center; margin-bottom:16px; line-height:1.55; font-weight:500 }
     .q-options { display:flex; justify-content:center; gap:10px }
     .q-opt { display:flex; flex-direction:column; align-items:center; gap:5px; font-size:.62rem; color:var(--ink-muted); text-align:center; width:60px; cursor:pointer }
-    .q-opt .dot { width:36px; height:36px; border-radius:50%; border:2.5px solid; transition:transform .15s, box-shadow .15s }
+    .q-opt .dot { width:36px; height:36px; border-radius:50%; border:2.5px solid; transition:transform .15s, box-shadow .15s; pointer-events:none }
     .q-opt:hover .dot { transform:scale(1.1) }
     .q-opt.selected.opt-sd .dot { background:#ffd6d6; border-color:#f4a5a5; border-width:4px; box-shadow:0 0 0 3px rgba(244,165,165,.3) }
     .q-opt.selected.opt-dg .dot { background:#fde8c8; border-color:#f5c878; border-width:4px; box-shadow:0 0 0 3px rgba(245,200,120,.3) }
