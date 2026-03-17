@@ -65,6 +65,23 @@
     .view { display:none }
     .view.active { display:block }
 
+    /* INTAKE FORM */
+    #view-intake { padding:120px 0 80px; min-height:100vh }
+    .intake-wrap { max-width:520px; margin:0 auto }
+    .intake-wrap h1 { font-family:var(--serif); font-size:clamp(1.8rem,4vw,2.4rem); font-weight:700; color:var(--ink); margin-bottom:10px; line-height:1.2 }
+    .intake-wrap .intake-sub { color:var(--ink-soft); font-size:.95rem; line-height:1.65; margin-bottom:36px }
+    .intake-field { margin-bottom:18px }
+    .intake-field label { display:block; font-size:.82rem; font-weight:600; color:var(--ink); margin-bottom:6px }
+    .intake-field input, .intake-field select { width:100%; padding:13px 16px; border:1.5px solid var(--border); border-radius:10px; font-family:var(--sans); font-size:.92rem; color:var(--ink); background:#fff; outline:none; transition:border-color .2s; box-sizing:border-box; appearance:none; -webkit-appearance:none }
+    .intake-field input:focus, .intake-field select:focus { border-color:var(--amber); box-shadow:0 0 0 3px rgba(232,160,32,.15) }
+    .intake-field select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235c5850' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:38px; cursor:pointer }
+    .intake-row { display:grid; grid-template-columns:1fr 1fr; gap:14px }
+    .intake-btn { width:100%; padding:16px; background:var(--amber); color:var(--dark); font-family:var(--sans); font-weight:700; font-size:1rem; border:none; border-radius:100px; cursor:pointer; box-shadow:0 6px 28px rgba(232,160,32,.38); transition:all .2s; margin-top:8px }
+    .intake-btn:hover { background:var(--amber-lt); transform:translateY(-2px) }
+    .intake-btn:disabled { background:rgba(0,0,0,.12); color:rgba(0,0,0,.3); box-shadow:none; cursor:default; transform:none }
+    .intake-disclaimer { font-size:.74rem; color:var(--ink-muted); text-align:center; margin-top:14px; line-height:1.55 }
+    @media(max-width:520px) { .intake-row { grid-template-columns:1fr } }
+
     /* ═══════════════════════════════
        ASSESSMENT VIEW
     ═══════════════════════════════ */
@@ -100,7 +117,7 @@
 
     /* Question card */
     .q-card { background:#fff; border-radius:14px; padding:20px 22px 18px; margin-bottom:10px; box-shadow:var(--sh-sm) }
-    .q-text { font-size:.9rem; color:var(--ink); text-align:center; margin-bottom:16px; line-height:1.55; font-weight:500 }
+    .q-text { font-size:.9rem; color:var(--ink); text-align:left; margin-bottom:16px; line-height:1.55; font-weight:500 }
     .q-options { display:flex; justify-content:center; gap:10px; flex-wrap:wrap }
     .q-opt { display:flex; flex-direction:column; align-items:center; gap:6px; font-size:.62rem; color:var(--ink-muted); text-align:center; width:68px; cursor:pointer; user-select:none; -webkit-user-select:none; position:relative }
     .q-opt .dot { width:44px; height:44px; border-radius:50%; border:2.5px solid; transition:all .18s ease; pointer-events:none; display:flex; align-items:center; justify-content:center }
@@ -306,10 +323,86 @@
   </div>
 </nav>
 
+
+<!-- ══════════════════════════════════════
+     VIEW 0: INTAKE FORM
+══════════════════════════════════════ -->
+<div id="view-intake" class="view active">
+  <div class="container">
+    <div class="intake-wrap">
+      <span style="display:inline-block;background:rgba(232,160,32,.15);color:var(--amber);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:7px 16px;border-radius:100px;margin-bottom:20px">ADHD Assessment</span>
+      <h1>Before you begin</h1>
+      <p class="intake-sub">Enter your details below to receive your personalised results by email. The assessment takes approximately 18 minutes and consists of 100 questions across 20 symptom domains.</p>
+
+      <div class="intake-row">
+        <div class="intake-field">
+          <label for="intake-firstname">First Name</label>
+          <input type="text" id="intake-firstname" placeholder="e.g. Sarah" autocomplete="given-name" />
+        </div>
+        <div class="intake-field">
+          <label for="intake-lastname">Last Name</label>
+          <input type="text" id="intake-lastname" placeholder="e.g. Johnson" autocomplete="family-name" />
+        </div>
+      </div>
+
+      <div class="intake-field">
+        <label for="intake-email">Email Address</label>
+        <input type="email" id="intake-email" placeholder="your@email.com" autocomplete="email" />
+      </div>
+
+      <div class="intake-row">
+        <div class="intake-field">
+          <label for="intake-country">Country</label>
+          <select id="intake-country">
+            <option value="">Select country...</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Australia</option>
+            <option>Canada</option>
+            <option>Ireland</option>
+            <option>New Zealand</option>
+            <option>United Arab Emirates</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Netherlands</option>
+            <option>Spain</option>
+            <option>Italy</option>
+            <option>Sweden</option>
+            <option>Norway</option>
+            <option>Denmark</option>
+            <option>Switzerland</option>
+            <option>Belgium</option>
+            <option>Austria</option>
+            <option>Portugal</option>
+            <option>Poland</option>
+            <option>South Africa</option>
+            <option>Singapore</option>
+            <option>India</option>
+            <option>Nigeria</option>
+            <option>Kenya</option>
+            <option>Ghana</option>
+            <option>Jamaica</option>
+            <option>Trinidad and Tobago</option>
+            <option>Barbados</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="intake-field">
+          <label for="intake-city">City</label>
+          <input type="text" id="intake-city" placeholder="e.g. London" autocomplete="address-level2" />
+        </div>
+      </div>
+
+      <button class="intake-btn" id="intake-submit-btn" onclick="startAssessment()">Start Assessment →</button>
+      <p class="intake-disclaimer">Your details are stored securely and used only to send you your results. We never share your information with third parties. <a href="https://attentiondeficittest.com/faqs" style="color:var(--amber)">Privacy FAQ</a></p>
+    </div>
+  </div>
+</div>
+
 <!-- ══════════════════════════════════════
      VIEW 1: ASSESSMENT (100 questions)
 ══════════════════════════════════════ -->
-<div id="view-assessment" class="view active">
+<div id="view-assessment" class="view">
   <div class="container">
     <div id="screens-container"></div>
   </div>
@@ -428,6 +521,7 @@
   <div class="container">
 
     <div class="result-hero" id="result-hero">
+      <div id="result-greeting" style="margin-bottom:16px"></div>
       <div class="result-badge" id="result-badge"></div>
       <div class="result-score-ring">
         <span class="score-num" id="result-score-num"></span>
@@ -519,6 +613,7 @@
   <div class="footer__bottom">
     <p>© 2025 AttentionDeficitTest.com. For informational purposes only. Not a substitute for professional medical advice.</p>
     <p>GDPR Compliant · Secure Payments via Stripe</p>
+    <p style="margin-top:12px;font-size:.75rem"><span style="color:rgba(255,255,255,.35);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-right:12px">Resources</span><a href="https://attentiondeficittest.com/sitemap" style="color:rgba(255,255,255,.35);margin-right:16px">Sitemap</a><a href="https://attentiondeficittest.com/llm" style="color:rgba(255,255,255,.35);margin-right:16px">LLM</a><a href="https://attentiondeficittest.com/robots" style="color:rgba(255,255,255,.35);margin-right:16px">Robots</a><a href="https://attentiondeficittest.com/glossary" style="color:rgba(255,255,255,.35)">Glossary</a></p>
   </div>
 </footer>
 
@@ -527,6 +622,67 @@
 // ─────────────────────────────────────────
 // QUESTION DATA
 // ─────────────────────────────────────────
+// ── Supabase config ──
+const SUPABASE_URL = 'https://zbichpyzvclfpnijpakh.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpiaWNocHl6dmNsZnBuaWpwYWtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4NjE3NzMsImV4cCI6MjA4NzQzNzc3M30.HH5mZQQ_vGPtMU9w_ofFtS-4UqassVyxXGIiuswY4Co';
+
+// ── User intake data ──
+let userData = { first_name:'', last_name:'', email:'', country:'', city:'' };
+
+function startAssessment() {
+  const fn = document.getElementById('intake-firstname').value.trim();
+  const ln = document.getElementById('intake-lastname').value.trim();
+  const em = document.getElementById('intake-email').value.trim();
+  const co = document.getElementById('intake-country').value;
+  const ci = document.getElementById('intake-city').value.trim();
+
+  // Basic validation
+  if (!fn || !ln || !em || !co || !ci) {
+    alert('Please fill in all fields before continuing.');
+    return;
+  }
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRe.test(em)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  userData = { first_name: fn, last_name: ln, email: em, country: co, city: ci };
+
+  // Switch to assessment view
+  document.getElementById('view-intake').classList.remove('active');
+  document.getElementById('view-assessment').classList.add('active');
+}
+
+async function saveResultsToSupabase(score, tier) {
+  try {
+    // 1. Save to database
+    await fetch(`${SUPABASE_URL}/rest/v1/adhd_assessment_results`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ ...userData, score, tier })
+    });
+
+    // 2. Trigger email via Edge Function
+    await fetch(`${SUPABASE_URL}/functions/v1/send-results-email`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      },
+      body: JSON.stringify({ ...userData, score, tier })
+    });
+  } catch (err) {
+    console.error('Supabase save error:', err);
+  }
+}
+
 const SECTIONS = [
   { title:"Attention & Focus", reversed:[2], qs:[
     "I often find it difficult to maintain focus on tasks that require sustained mental effort.",
@@ -686,15 +842,15 @@ function buildScreens() {
     div.style.display = si === 0 ? 'block' : 'none';
     let html = `<div class="screen-header">
       <div class="screen-tag">Section ${si+1} of 20 &nbsp;·&nbsp; ${sec.title}</div>
-      <h2>Choose how accurately each statement reflects you.</h2>
+      ${si === 0 ? `<h2>Choose how accurately each statement reflects you.</h2>` : ''}
     </div>
-    <div class="scale-legend">
+    ${si === 0 ? `<div class="scale-legend">
       <span><span class="dot-sm c-sd"></span>Strongly Disagree</span>
       <span><span class="dot-sm c-dg"></span>Disagree</span>
       <span><span class="dot-sm c-nt"></span>Neutral</span>
       <span><span class="dot-sm c-ag"></span>Agree</span>
       <span><span class="dot-sm c-sa"></span>Strongly Agree</span>
-    </div>`;
+    </div>` : ''}`;
     sec.qs.forEach((q, qi) => {
       html += `<div class="q-card" id="qcard-${si}-${qi}">
         <div class="q-text"><strong>Q${qGlobal++}.</strong> ${q}</div>
@@ -842,8 +998,18 @@ function showResults() {
     lead='Your responses show strong patterns consistent with ADHD across multiple domains. A professional evaluation is strongly recommended.';
   }
 
+  // Save to Supabase and send email
+  saveResultsToSupabase(total, tier);
+
   const rv = document.getElementById('view-results');
   rv.className = 'view ' + theme;
+
+  // Personalised greeting
+  const greeting = userData.first_name
+    ? `<p style="font-size:.95rem;color:var(--ink-soft);margin-bottom:8px">Hi <strong>${userData.first_name}</strong> — your results are ready${userData.email ? '. A summary has been sent to <strong>' + userData.email + '</strong>' : ''}.</p>`
+    : '';
+  const greetingEl = document.getElementById('result-greeting');
+  if (greetingEl) greetingEl.innerHTML = greeting;
 
   document.getElementById('result-badge').innerHTML = badge;
   document.getElementById('result-score-num').textContent = total;

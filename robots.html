@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robots & Crawlers Policy | AttentionDeficitTest.com</title>
+  <meta name="description" content="Robots and web crawler policy for AttentionDeficitTest.com — crawl permissions, indexing guidelines and AI scraping policy." />
+  <link rel="canonical" href="https://attentiondeficittest.com/robots" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2FBW4JS6G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2FBW4JS6G');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--dark:#12100e;--dark-2:#1c1a17;--ink:#1e1c19;--ink-soft:#5c5850;--cream:#faf8f4;--white:#fff;--amber:#e8a020;--amber-glow:rgba(232,160,32,.15);--r:16px;--serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',sans-serif;--sh-sm:0 2px 12px rgba(0,0,0,.06)}
+    *{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.65}a{color:var(--amber);text-decoration:none}.container{max-width:800px;margin:0 auto;padding:0 24px}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:16px 0;background:rgba(18,16,14,.96);backdrop-filter:blur(20px)}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:0 auto;padding:0 24px}
+    .nav__logo{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff;display:flex;align-items:center;gap:10px}
+    .nav__logo-ic{width:32px;height:32px;background:var(--amber);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .btn-amber{background:var(--amber);color:var(--dark);padding:11px 24px;font-size:.88rem;font-weight:700;border:none;border-radius:100px;cursor:pointer;font-family:var(--sans)}
+    .hero{background:var(--dark);padding:120px 0 60px;text-align:center}
+    .hero h1{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:#fff;margin-bottom:12px}
+    .hero p{color:rgba(255,255,255,.5);font-size:.95rem}
+    .eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:12px;display:block}
+    .body{padding:64px 24px 80px;max-width:800px;margin:0 auto}
+    h2{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin:40px 0 14px;color:var(--ink)}
+    p{color:var(--ink-soft);font-size:.94rem;line-height:1.75;margin-bottom:14px}
+    ul{color:var(--ink-soft);font-size:.94rem;line-height:1.75;margin:0 0 14px 20px}
+    li{margin-bottom:6px}
+    .code-block{background:var(--dark);color:#e8d5a0;font-family:'Courier New',monospace;font-size:.82rem;padding:20px 24px;border-radius:var(--r);margin:16px 0;white-space:pre;line-height:1.7}
+    .status-table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm)}
+    .status-table th{background:var(--dark);color:#fff;font-size:.82rem;padding:12px 16px;text-align:left;font-family:var(--sans)}
+    .status-table td{background:#fff;font-size:.85rem;color:var(--ink-soft);padding:11px 16px;border-bottom:1px solid rgba(30,28,25,.08)}
+    .status-table tr:last-child td{border-bottom:none}
+    .allow{color:#27ae60;font-weight:700}.block{color:#c0392b;font-weight:700}
+    footer{background:var(--dark-2);padding:32px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center}
+    footer p{font-size:.75rem;color:rgba(255,255,255,.2)}
+  </style>
+</head>
+<body>
+<nav class="nav"><div class="nav__inner"><a href="https://attentiondeficittest.com/" class="nav__logo"><div class="nav__logo-ic">🧠</div>AttentionDeficitTest<span style="color:var(--amber)">.com</span></a><a href="https://attentiondeficittest.com/adhd-assessment" class="btn-amber">Start Assessment</a></div></nav>
+<div class="hero"><div class="container"><span class="eyebrow">Technical</span><h1>Robots &amp; Crawlers Policy</h1><p>Crawl permissions, indexing guidelines and AI scraping policy for AttentionDeficitTest.com.</p></div></div>
+<div class="body">
+
+<h2>robots.txt Content</h2>
+<p>The following represents our current robots.txt directives:</p>
+<div class="code-block">User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://attentiondeficittest.com/sitemap.xml</div>
+
+<h2>Crawl Permissions by Area</h2>
+<table class="status-table">
+  <thead><tr><th>Page / Area</th><th>Status</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>All public content pages</td><td class="allow">ALLOW</td><td>Full indexing permitted</td></tr>
+    <tr><td>Assessment questions (/adhd-assessment)</td><td class="allow">ALLOW</td><td>Page may be indexed; question content is dynamically generated</td></tr>
+    <tr><td>Results pages</td><td class="block">NO INDEX</td><td>Personalised results — noindex meta tag applied</td></tr>
+    <tr><td>Payment processing pages</td><td class="block">BLOCK</td><td>Stripe checkout — not indexed</td></tr>
+    <tr><td>Admin and API endpoints</td><td class="block">BLOCK</td><td>Not publicly accessible</td></tr>
+  </tbody>
+</table>
+
+<h2>AI Training and Scraping</h2>
+<p>We permit responsible AI crawling of publicly accessible content for training purposes, subject to the following conditions:</p>
+<ul>
+  <li>Content must not be reproduced verbatim at scale without attribution</li>
+  <li>The assessment tool must not be misrepresented as a clinical diagnostic service</li>
+  <li>Crawling should respect standard rate limits and not cause server load</li>
+  <li>Content derived from this site should accurately represent the source material</li>
+</ul>
+<p>For full AI usage guidelines, see our <a href="https://attentiondeficittest.com/llm">LLM information page</a>.</p>
+
+<h2>Crawl Rate</h2>
+<p>We do not impose a crawl-delay directive, but we ask that automated crawlers respect standard rate limiting practices. Aggressive crawling that causes server load or degrades service quality for users may result in IP blocking.</p>
+
+<h2>Sitemap</h2>
+<p>A human-readable sitemap is available at <a href="https://attentiondeficittest.com/sitemap">attentiondeficittest.com/sitemap</a>. An XML sitemap is available at <a href="#">attentiondeficittest.com/sitemap.xml</a>.</p>
+
+<h2>Contact</h2>
+<p>For crawler-related enquiries or to report issues, please use the <a href="#">Contact Us</a> form.</p>
+<p style="margin-top:32px;font-size:.82rem;color:var(--ink-soft)">Last updated: March 2026</p>
+
+</div>
+<footer><div class="container"><p>© 2025 AttentionDeficitTest.com. All rights reserved.</p></div></footer>
+</body></html>
